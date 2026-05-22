@@ -1,0 +1,118 @@
+.about{
+
+  width: 100%;
+
+  background: #f7f4ef;
+
+  padding: 140px 8%;
+}
+
+/* CONTENEDOR */
+
+.about-container{
+
+  max-width: 1400px;
+
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 80px;
+}
+
+/* IZQUIERDA */
+
+.about-left{
+  flex: 1;
+}
+
+/* LOGO */
+
+.about-logo{
+
+  width: 250px;
+margin-bottom: 30px;
+}
+
+/* SUBTITULO */
+
+.about-subtitle{
+
+  color: #b89663;
+
+  letter-spacing: 3px;
+
+  font-size: 0.9rem;
+
+  margin-bottom: 20px;
+}
+
+/* TITULO */
+
+.about-left h2{
+
+  font-size: 3rem;
+
+  line-height: 1.1;
+
+  color: #111;
+
+  margin-bottom: 30px;
+
+  font-weight: 600;
+}
+
+/* TEXTO */
+
+.about-text{
+
+  color: #555;
+
+  font-size: 1.05rem;
+
+  line-height: 1.9;
+
+  max-width: 600px;
+}
+
+/* DERECHA */
+
+.about-right{
+  flex: 1;
+}
+
+.about-right img{
+
+  width: 100%;
+
+  height: 700px;
+
+  object-fit: cover;
+
+  border-radius: 25px;
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 992px){
+
+  .about-container{
+
+    flex-direction: column;
+  }
+
+  .about-left h2{
+
+    font-size: 2.5rem;
+  }
+
+  .about-right img{
+
+    height: 500px;
+  }
+
+}

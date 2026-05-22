@@ -1,0 +1,121 @@
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero{
+
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+/* OVERLAY OSCURO */
+
+.overlay{
+
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.45);
+
+  top: 0;
+  left: 0;
+}
+
+/* CONTENIDO */
+
+.hero-content{
+
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+
+  color: white;
+
+  padding: 20px;
+}
+
+/* SUBTITULO */
+
+.hero-subtitle{
+
+  color: #a69585;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* TITULO */
+
+.hero-content h1{
+
+  font-size: 5rem;
+
+  line-height: 1.1;
+
+  max-width: 1000px;
+
+  font-weight: 600;
+
+  margin-bottom: 30px;
+}
+
+/* BOTON */
+
+.hero-content button{
+
+  padding: 16px 34px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background: #a69585;
+
+  color: black;
+
+  font-size: 1rem;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.hero-content button:hover{
+
+  transform: scale(1.05);
+
+  background: white;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px){
+
+  .hero-content h1{
+    font-size: 2.8rem;
+  }
+
+}

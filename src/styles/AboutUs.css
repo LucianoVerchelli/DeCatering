@@ -7,10 +7,6 @@
   padding: 0;
 }
 
-/* Temporal para pruebas (lo puedes borrar cuando verifiques que funcione) */
-* {
-  outline: 1px solid red !important;
-}
 
 /* ==========================================================================
    2. COMPONENTE ABOUT
@@ -97,7 +93,7 @@
 @media(max-width: 992px) {
   
   .about {
-    /* Reducimos un poco el padding en pantallas chicas para que respire 
+    /*  poco el padding en pantallas chicas para que respire 
        el diseño sin empujar el contenido hacia afuera */
     padding: 80px 5%; 
   }
@@ -105,7 +101,7 @@
   .about-container {
     flex-direction: column;
     align-items: center;
-    /* Reducimos el gap horizontal/vertical para mobile */
+    /* reducir el gap horizontal/vertical para mobile */
     gap: 40px; 
   }
 

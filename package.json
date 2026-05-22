@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://TUUSUARIO.github.io/de-catering",
+  "homepage": "https://LucianoVerchelli.github.io/DeCatering",
   "dependencies": {
     "framer-motion": "^12.40.0",
     "react": "^19.2.6",

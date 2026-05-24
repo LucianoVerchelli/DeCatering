@@ -15,7 +15,7 @@ const certifications = [
     title:  "Iram 14201",
     subtitle: "Seguridad alimentaria",
     text:
-      "Elaboracion y Distribucion de Comidas."
+      "Elaboracion y Distribucion de Comidas. Optimizamos la calidad de todas nuestras comidas mediante estrictos procedimientos y controles de trazabilidad, desde nuestras materias primas hasta el consumo en tu empresa."
   },
 
   {

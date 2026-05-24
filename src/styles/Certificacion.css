@@ -1,0 +1,211 @@
+.certifications{
+
+  position: relative;
+
+  padding: 220px 0;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(255,255,255,0.03),
+      transparent 40%
+    ),
+    #111;
+
+  overflow: hidden;
+}
+
+/* HEADER */
+
+.certifications-header{
+
+  width: 90%;
+
+  max-width: 1400px;
+
+  margin: auto;
+
+  margin-bottom: 120px;
+}
+
+.certifications-header span{
+
+  color: #a69585;
+
+  letter-spacing: 4px;
+
+  font-size: 0.85rem;
+}
+
+.certifications-header h2{
+
+  color: white;
+
+  font-size: 4.5rem;
+
+  line-height: 1.05;
+
+  margin-top: 25px;
+
+  max-width: 900px;
+}
+
+/* GRID */
+
+.certifications-grid{
+
+  width: 90%;
+
+  max-width: 1400px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 40px;
+}
+
+/* CARD */
+
+.cert-card{
+
+  position: relative;
+
+  padding: 50px;
+
+  border-radius: 34px;
+
+  background:
+    rgba(255,255,255,0.03);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(12px);
+
+  overflow: hidden;
+
+  transition: 0.45s ease;
+
+  min-height: 320px;
+}
+
+/* GLOW */
+
+.cert-card::before{
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+
+    radial-gradient(
+      circle at top left,
+      rgba(166,149,133,0.15),
+      transparent 55%
+    );
+
+  opacity: 0;
+
+  transition: 0.5s ease;
+}
+
+/* HOVER */
+
+.cert-card:hover{
+
+  transform:
+    translateY(-10px);
+
+  border:
+    1px solid rgba(166,149,133,0.2);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.35);
+}
+
+.cert-card:hover::before{
+
+  opacity: 1;
+}
+
+/* NUMERO */
+
+.cert-number{
+
+  color: rgba(255,255,255,0.2);
+
+  font-size: 0.9rem;
+
+  margin-bottom: 40px;
+
+  letter-spacing: 3px;
+}
+
+/* TITULO */
+
+.cert-card h3{
+
+  color: white;
+
+  font-size: 2.4rem;
+
+  margin-bottom: 12px;
+}
+
+/* SUB */
+
+.cert-card h4{
+
+  color: #a69585;
+
+  font-size: 1rem;
+
+  margin-bottom: 24px;
+
+  font-weight: 500;
+}
+
+/* TEXTO */
+
+.cert-card p{
+
+  color: rgba(255,255,255,0.7);
+
+  line-height: 1.9;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 992px){
+
+  .certifications-grid{
+
+    grid-template-columns: 1fr;
+  }
+
+  .certifications-header h2{
+
+    font-size: 3rem;
+  }
+
+}
+
+@media(max-width: 768px){
+
+  .certifications{
+
+    padding: 120px 20px;
+  }
+
+  .cert-card{
+
+    padding: 35px;
+  }
+
+}

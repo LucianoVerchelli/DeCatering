@@ -4,14 +4,28 @@ import Hero from './components/Hero';
 import About from './components/AboutUs';
 import Culinary from './components/Culinary';
 import Services from './components/Services';
+import Enterprise from './components/Enfoque';
+import SmoothScroll from "./components/SmoothScroll";
+import Certificacion from './components/Certificacion';
+
+
 function App() {
   return (
     <>
+
+      <SmoothScroll />
+
       <Navbar />
       <Hero />
-      <About />
-      <Culinary /> 
+      
       <Services /> 
+      <About />
+
+      <Certificacion />
+     <Enterprise />
+
+      <Culinary /> 
+      
     </>
   );
 }

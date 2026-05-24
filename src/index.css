@@ -3,3 +3,15 @@ body{
   overflow-x: hidden;
 scroll-behavior: smooth;
 }
+
+html{
+  scroll-behavior: auto;
+}
+
+body{
+  overscroll-behavior: none;
+}
+
+*{
+  -webkit-font-smoothing: antialiased;
+}

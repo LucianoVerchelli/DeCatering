@@ -53,8 +53,8 @@ function Navbar() {
 
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Servicios</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Galería</a></li>
+            <li><a href="#">Certificaciones</a></li>
+            <li><a href="#">Sustentabilidad</a></li>
             <li><a href="#">Contacto</a></li>
 
           </ul>
@@ -93,8 +93,8 @@ function Navbar() {
 
           <li><a href="#">Inicio</a></li>
           <li><a href="#">Servicios</a></li>
-          <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Galería</a></li>
+          <li><a href="#">Certificaciones</a></li>
+          <li><a href="#">Sustentabilidad</a></li>
           <li><a href="#">Contacto</a></li>
 
         </ul>

@@ -53,7 +53,7 @@ function Services() {
             </h3>
 
             <p>
-              Menús corporativos premium
+              Menús corporativos
               diseñados para equipos de trabajo.
             </p>
 
@@ -118,7 +118,7 @@ function Services() {
 
             <p>
               Eventos empresariales con
-              asistencia profesional y presentación premium.
+              asistencia profesional y presentación de calidad.
             </p>
 
           </div>

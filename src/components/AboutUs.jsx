@@ -2,7 +2,7 @@ import "../styles/AboutUs.css";
 
 import { motion } from "framer-motion";
 
-import logo from "../assets/logo2.jpg";
+import logo from "../assets/logo.svg";
 import aboutImage from "../assets/aboutIMG.jpeg";
 
 function About() {
@@ -42,7 +42,7 @@ function About() {
           </h2>
 
           <p className="about-text">
-            En DeCatering, nos apasiona crear experiencias gastronómicas únicas y memorables para empresas. Nuestro equipo de expertos culinarios se dedica a diseñar menús personalizados que se adaptan a las necesidades y preferencias de cada cliente. Ya sea para eventos corporativos, reuniones de negocios o celebraciones especiales, ofrecemos una amplia variedad de opciones gastronómicas que combinan sabores innovadores con ingredientes frescos y de alta calidad. Nuestra misión es transformar cada evento en una experiencia culinaria excepcional que deje una impresión duradera en todos los asistentes.
+            En DeCatering, nos apasiona crear experiencias gastronómicas únicas y memorables para empresas. Nuestro equipo de expertos culinarios se dedica a diseñar menús personalizados que se adaptan a las necesidades y preferencias de cada cliente. Ya sea para eventos corporativos, reuniones de negocios o celebraciones especiales, ofrecemos una amplia variedad de opciones gastronómicas que combinan sabores innovadores con ingredientes frescos y de alta calidad. 
 
           </p>
 

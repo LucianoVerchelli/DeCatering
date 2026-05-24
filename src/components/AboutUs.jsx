@@ -9,7 +9,7 @@ function About() {
 
   return (
 
-    <section className="about">
+    <section className="about" id="about">
 
       <div className="about-container">
 

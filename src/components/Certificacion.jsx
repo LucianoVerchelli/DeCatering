@@ -12,10 +12,10 @@ const certifications = [
   },
 
   {
-    title: "HACCP",
+    title:  "Iram 14201",
     subtitle: "Seguridad alimentaria",
     text:
-      "Control y prevención de riesgos en toda la cadena gastronómica."
+      "Elaboracion y Distribucion de Comidas."
   },
 
   {

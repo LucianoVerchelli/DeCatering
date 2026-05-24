@@ -7,8 +7,8 @@ import Services from './components/Services';
 import Enterprise from './components/Enfoque';
 import SmoothScroll from "./components/SmoothScroll";
 import Certificacion from './components/Certificacion';
-
-
+import FormContact from './components/FormContact';
+import Footer from './components/Footer';
 function App() {
   return (
     <>
@@ -25,6 +25,9 @@ function App() {
      <Enterprise />
 
       <Culinary /> 
+
+      <FormContact />
+      <Footer />
       
     </>
   );

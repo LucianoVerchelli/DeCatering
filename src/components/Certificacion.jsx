@@ -10,7 +10,7 @@ const certifications = [
     title: "ISO 9001",
     subtitle: "Gestión de calidad",
     text:
-      "Procesos organizados bajo estándares internacionales de calidad."
+      "nuestra política se sustenta en garantizar que todo el personal esté comprometido con la calidad desde cada puesto de trabajo, capacitándose y trabajando en equipo para lograr una mejor calidad de servicio y la satisfacción de nuestros clientes."
   },
 
   {
@@ -24,7 +24,7 @@ const certifications = [
     title: "BPM",
     subtitle: "Buenas prácticas",
     text:
-      "Protocolos sanitarios y operativos para máxima excelencia."
+      "Protocolos sanitarios y operativos para máxima excelencia. Nuestra operación trabaja bajoBuenas Prácticas de Manufacturapara asegurar trazabilidad,higiene y control integral."
   }
 
 ];

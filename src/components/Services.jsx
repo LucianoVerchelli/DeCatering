@@ -57,6 +57,16 @@ function Services() {
               diseñados para equipos de trabajo.
             </p>
 
+            <button className="service-btn">
+
+  Ver más
+
+  <span>
+    ↗
+  </span>
+
+</button> 
+
           </div>
 
         </motion.div>
@@ -88,7 +98,17 @@ function Services() {
               Servicio gastronómico integral
               dentro de tu empresa.
             </p>
+            
+        
+        <button className="service-btn">
 
+            Ver más
+
+          <span>
+           ↗
+          </span>
+
+</button>
           </div>
 
         </motion.div>
@@ -120,7 +140,15 @@ function Services() {
               Eventos empresariales con
               asistencia profesional y presentación de calidad.
             </p>
+<button className="service-btn">
 
+  Ver más
+
+  <span>
+    ↗
+  </span>
+
+</button>
           </div>
 
         </motion.div>

@@ -2,6 +2,8 @@ import "../styles/Certificacion.css";
 
 import { motion } from "framer-motion";
 
+import logoCert from "../assets/logoCert.webp";
+
 const certifications = [
 
   {
@@ -31,7 +33,7 @@ function Certificacion() {
 
   return (
 
-    <section className="certifications">
+    <section className="certifications" id="certifications">
 
       <div className="certifications-header">
 
@@ -41,8 +43,7 @@ function Certificacion() {
 
         <h2>
           Estándares corporativos
-          <br />
-          y excelencia gastronómica
+
         </h2>
 
       </div>
@@ -95,6 +96,10 @@ function Certificacion() {
         ))}
 
       </div>
+      <div className="certificacion-logo">
+        <img src={logoCert} alt="Imagen de Certificación Iram 14201" />
+        </div>  
+        
 
     </section>
   );

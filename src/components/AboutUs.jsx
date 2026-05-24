@@ -3,7 +3,7 @@ import "../styles/AboutUs.css";
 import { motion } from "framer-motion";
 
 import logo from "../assets/logo.svg";
-import aboutImage from "../assets/aboutIMG.jpeg";
+import aboutImage from "../assets/aboutIMG.webp";
 
 function About() {
 

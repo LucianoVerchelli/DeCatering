@@ -51,11 +51,11 @@ function Navbar() {
 
           <ul className="nav-links">
 
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Certificaciones</a></li>
-            <li><a href="#">Sustentabilidad</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#certifications">Certificaciones</a></li>
+            <li><a href="#sustainability">Sustentabilidad</a></li>
+            <li><a href="#contact">Contacto</a></li>
 
           </ul>
 

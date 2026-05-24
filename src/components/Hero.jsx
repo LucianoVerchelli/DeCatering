@@ -1,12 +1,12 @@
 import "../styles/Hero.css";
 
-import heroImage from "../assets/hero.jpg";
+import heroImage from "../assets/hero.webp";
 
 function Hero() {
   return (
 
     <section
-      className="hero"
+      className="hero" id="home"
       style={{
         backgroundImage: `url(${heroImage})`
       }}

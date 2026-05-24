@@ -2,15 +2,15 @@ import "../styles/Services.css";
 
 import { motion } from "framer-motion";
 
-import img1 from "../assets/viandas.png";
-import img2 from "../assets/inSitu.jpg";
-import img3 from "../assets/asistido.jpg";
+import img1 from "../assets/viandas.webp";
+import img2 from "../assets/inSitu.webp";
+import img3 from "../assets/asistido.webp";
 
 function Services() {
 
   return (
 
-    <section className="services">
+    <section className="services" id="services">
 
       <div className="services-header">
 

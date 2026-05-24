@@ -1,10 +1,10 @@
 import "../styles/Culinary.css";
 
-import bgImage from "../assets/hero.jpg";
+import bgImage from "../assets/hero.webp";
 
-import img1 from "../assets/img1.jpeg";
-import img2 from "../assets/img2.jpeg";
-import img3 from "../assets/img3.jpeg";
+import img1 from "../assets/img1.webp";
+import img2 from "../assets/img2.webp";
+import img3 from "../assets/img3.webp";
 
 function Culinary() {
 

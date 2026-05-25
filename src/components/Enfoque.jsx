@@ -1,4 +1,7 @@
 import "../styles/Enfoque.css";
+import imgEn1 from "../assets/imgEn1.jpg";
+import imgEn2 from "../assets/imgEn2.jpg";
+import imgEn3 from "../assets/imgEn3.jpg";
 
 import {
 
@@ -14,8 +17,6 @@ import logo from "../assets/logo.svg";
 function Enterprise() {
 
   const sectionRef = useRef(null);
-
-  // SCROLL SOLO DE ESTA SECCION
 
   const { scrollYProgress } = useScroll({
 
@@ -45,131 +46,225 @@ function Enterprise() {
 
       </div>
 
-      {/* CONTENIDO */}
-
       <div className="enterprise-container">
 
-        {/* ITEM 1 */}
+        {/* ROW 1 */}
 
-        <motion.div
+        <div className="enterprise-row">
 
-          className="enterprise-item left"
+          <motion.div
 
-          initial={{
-            opacity: 0,
-            x: -80
-          }}
+            className="enterprise-item"
 
-          whileInView={{
-            opacity: 1,
-            x: 0
-          }}
+            initial={{
+              opacity: 0,
+              x: -80
+            }}
 
-          transition={{
-            duration: 1
-          }}
+            whileInView={{
+              opacity: 1,
+              x: 0
+            }}
 
-          viewport={{
-            once: true
-          }}
+            transition={{
+              duration: 1
+            }}
 
-        >
+            viewport={{
+              once: true
+            }}
 
-          <span>01</span>
+          >
 
-          <h2>
-            Enfoque empresarial
-          </h2>
+            <span>01</span>
 
-          <p>
-            Diseñamos experiencias gastronómicas
-            pensadas para empresas modernas,
-            oficinas y corporaciones.
-          </p>
+            <h2>
+              Enfoque empresarial
+            </h2>
 
-        </motion.div>
+            <p>
+              Diseñamos experiencias gastronómicas
+              pensadas para empresas modernas,
+              oficinas y corporaciones.
+            </p>
 
-        {/* ITEM 2 */}
+          </motion.div>
 
-        <motion.div
+          <motion.div
 
-          className="enterprise-item right"
+            className="enterprise-image"
 
-          initial={{
-            opacity: 0,
-            x: 80
-          }}
+            initial={{
+              opacity: 0,
+              scale: 0.8
+            }}
 
-          whileInView={{
-            opacity: 1,
-            x: 0
-          }}
+            whileInView={{
+              opacity: 1,
+              scale: 1
+            }}
 
-          transition={{
-            duration: 1
-          }}
+            transition={{
+              duration: 1
+            }}
 
-          viewport={{
-            once: true
-          }}
+            viewport={{
+              once: true
+            }}
 
-        >
+          >
 
-          <span>02</span>
+            <img src={imgEn1} alt="" />
 
-          <h2>
-            Operación integral
-          </h2>
+          </motion.div>
 
-          <p>
-            Gestionamos logística, producción
-            y servicio gastronómico con
-            estándares corporativos.
-          </p>
+        </div>
 
-        </motion.div>
+        {/* ROW 2 */}
 
-        {/* ITEM 3 */}
+        <div className="enterprise-row reverse">
 
-        <motion.div
+          <motion.div
 
-          className="enterprise-item left"
+            className="enterprise-image"
 
-          initial={{
-            opacity: 0,
-            x: -80
-          }}
+            initial={{
+              opacity: 0,
+              scale: 0.8
+            }}
 
-          whileInView={{
-            opacity: 1,
-            x: 0
-          }}
+            whileInView={{
+              opacity: 1,
+              scale: 1
+            }}
 
-          transition={{
-            duration: 1
-          }}
+            transition={{
+              duration: 1
+            }}
 
-          viewport={{
-            once: true
-          }}
+            viewport={{
+              once: true
+            }}
 
-        >
+          >
 
-          <span>03</span>
+            <img src={imgEn2} alt="" />
 
-          <h2>
-            Calidad y sustentabilidad
-          </h2>
+          </motion.div>
 
-          <p>
-            Trabajamos con productos frescos,
-            procesos responsables y una estética
-            gastronómica moderna.
-          </p>
+          <motion.div
 
-        </motion.div>
+            className="enterprise-item"
 
-        {/* LOGO FINAL */}
+            initial={{
+              opacity: 0,
+              x: 80
+            }}
+
+            whileInView={{
+              opacity: 1,
+              x: 0
+            }}
+
+            transition={{
+              duration: 1
+            }}
+
+            viewport={{
+              once: true
+            }}
+
+          >
+
+            <span>02</span>
+
+            <h2>
+              Operación integral
+            </h2>
+
+            <p>
+              Gestionamos logística, producción
+              y servicio gastronómico con
+              estándares corporativos.
+            </p>
+
+          </motion.div>
+
+        </div>
+
+        {/* ROW 3 */}
+
+        <div className="enterprise-row">
+
+          <motion.div
+
+            className="enterprise-item"
+
+            initial={{
+              opacity: 0,
+              x: -80
+            }}
+
+            whileInView={{
+              opacity: 1,
+              x: 0
+            }}
+
+            transition={{
+              duration: 1
+            }}
+
+            viewport={{
+              once: true
+            }}
+
+          >
+
+            <span>03</span>
+
+            <h2>
+              Calidad y sustentabilidad
+            </h2>
+
+            <p>
+              Trabajamos con productos frescos,
+              procesos responsables y una estética
+              gastronómica moderna.
+            </p>
+
+          </motion.div>
+
+          <motion.div
+
+            className="enterprise-image"
+
+            initial={{
+              opacity: 0,
+              scale: 0.8
+            }}
+
+            whileInView={{
+              opacity: 1,
+              scale: 1
+            }}
+
+            transition={{
+              duration: 1
+            }}
+
+            viewport={{
+              once: true
+            }}
+
+          >
+
+            <img src={imgEn3} alt="" />
+
+          </motion.div>
+
+        </div>
+
+        {/* LOGO */}
 
         <motion.div
 

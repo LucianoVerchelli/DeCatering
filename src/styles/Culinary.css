@@ -74,7 +74,7 @@
 
 /* GALERIA */
 
-.gallery{
+.gallery-section{
 
   display: flex;
 
@@ -88,7 +88,7 @@
 }
 /* ITEMS */
 
-.gallery-item{
+.gallery-item-section{
 
   position: relative;
 
@@ -105,7 +105,7 @@
 
 /* IMAGEN */
 
-.gallery-item img{
+.gallery-item-section img{
 
   width: 100%;
   height: 100%;
@@ -121,21 +121,21 @@
 
 /* CUANDO PASAS EL MOUSE SOBRE LA GALERIA */
 
-.gallery:hover .gallery-item{
+.gallery-section:hover .gallery-item-section{
 
   flex: 0.9;
 }
 
 /* ITEM ACTIVO */
 
-.gallery .gallery-item:hover{
+.gallery-section .gallery-item-section:hover{
 
   flex: 1.4;
 }
 
 /* IMAGENES */
 
-.gallery-item img{
+.gallery-item-section img{
 
   width: 100%;
   height: 100%;
@@ -149,7 +149,7 @@
 
 /* IMAGENES NO ACTIVAS */
 
-.gallery:hover .gallery-item img{
+.gallery-section:hover .gallery-item-section img{
 
   transform: scale(1);
 
@@ -158,7 +158,7 @@
 
 /* IMAGEN ACTIVA */
 
-.gallery .gallery-item:hover img{
+.gallery-section .gallery-item-section:hover img{
 
   transform: scale(1.08);
 
@@ -189,14 +189,16 @@
 
 @media(max-width: 992px){
 
-  .gallery{
+  .gallery-section  {
 
     grid-template-columns: 1fr;
+    flex-direction: column;
   }
 
-  .gallery-item{
+  .gallery-item-section{
 
-    height: 420px;
+    height: 100%;
+    
   }
 
   .culinary-content h2{

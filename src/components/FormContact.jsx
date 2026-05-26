@@ -42,13 +42,12 @@ function Contact() {
 
           <h2>
 
-            Hablemos sobre
+            Hablemos de soluciones para 
             <br />
 
-            su próxima
-            <br />
+            tu
 
-            experiencia gastronómica.
+            empresa.
 
           </h2>
 

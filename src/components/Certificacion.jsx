@@ -4,31 +4,6 @@ import { motion } from "framer-motion";
 
 import logoCert from "../assets/logoCert.webp";
 
-const certifications = [
-
-  {
-    title: "ISO 9001",
-    subtitle: "Gestión de calidad",
-    text:
-      "nuestra política se sustenta en garantizar que todo el personal esté comprometido con la calidad desde cada puesto de trabajo, capacitándose y trabajando en equipo para lograr una mejor calidad de servicio y la satisfacción de nuestros clientes."
-  },
-
-  {
-    title:  "Iram 14201",
-    subtitle: "Seguridad alimentaria",
-    text:
-      "Elaboracion y Distribucion de Comidas. Optimizamos la calidad de todas nuestras comidas mediante estrictos procedimientos y controles de trazabilidad, desde nuestras materias primas hasta el consumo en tu empresa."
-  },
-
-  {
-    title: "BPM",
-    subtitle: "Buenas prácticas",
-    text:
-      "Protocolos sanitarios y operativos para máxima excelencia. Nuestra operación trabaja bajoBuenas Prácticas de Manufacturapara asegurar trazabilidad,higiene y control integral."
-  }
-
-];
-
 function Certificacion() {
 
   return (
@@ -42,64 +17,65 @@ function Certificacion() {
         </span>
 
         <h2>
-          Estándares corporativos
-
+          Compromiso con la calidad y seguridad alimentaria
         </h2>
 
       </div>
 
-      <div className="certifications-grid">
+      <motion.div
 
-        {certifications.map((item, index) => (
+  className="cert-card"
 
-          <motion.div
+  initial={{
+    opacity: 0,
+    y: 80
+  }}
 
-            key={index}
+  whileInView={{
+    opacity: 1,
+    y: 0
+  }}
 
-            className="cert-card"
+  transition={{
+    duration: 0.8
+  }}
 
-            initial={{
-              opacity: 0,
-              y: 80
-            }}
+  viewport={{
+    once: true
+  }}
 
-            whileInView={{
-              opacity: 1,
-              y: 0
-            }}
+>
 
-            transition={{
-              duration: 0.8,
-              delay: index * 0.15
-            }}
+  <span className="cert-label">
+    CERTIFICACIÓN
+  </span>
 
-            viewport={{
-              once: true
-            }}
+  <h3>
+    IRAM 14201
+  </h3>
 
-          >
+  <h4>
+    Elaboracion y Distribucion de Comidas.
+  </h4>
 
-            <div className="cert-number">
+  <p>
+    Nuestra operación trabaja bajo certificación
+    IRAM 14201, aplicando estrictos protocolos
+    sanitarios, trazabilidad y Buenas Prácticas
+    de Manufactura para garantizar calidad,
+    higiene y control integral en cada servicio.
+  </p>
 
-              0{index + 1}
+</motion.div>
 
-            </div>
+      <div className="certificacion-logo">
 
-            <h3>{item.title}</h3>
-
-            <h4>{item.subtitle}</h4>
-
-            <p>{item.text}</p>
-
-          </motion.div>
-
-        ))}
+        <img
+          src={logoCert}
+          alt="Imagen de Certificación Iram 14201"
+        />
 
       </div>
-      <div className="certificacion-logo">
-        <img src={logoCert} alt="Imagen de Certificación Iram 14201" />
-        </div>  
-        
 
     </section>
   );

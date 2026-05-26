@@ -26,22 +26,22 @@ function Culinary() {
         </p>
 
         <h2>
-          Elaboración propia de platos con ingredientes de primera calidad
+         Utilizamos ingredientes de primera calidad
         </h2>
 
         {/* GALERIA */}
 
-        <div className="gallery">
+        <div className="gallery-section">
 
-          <div className="gallery-item">
+          <div className="gallery-item-section">
             <img src={img1} alt="" />
           </div>
 
-          <div className="gallery-item">
+          <div className="gallery-item-section">
             <img src={img2} alt="" />
           </div>
 
-          <div className="gallery-item">
+          <div className="gallery-item-section">
             <img src={img3} alt="" />
           </div>
 

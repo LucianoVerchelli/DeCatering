@@ -9,6 +9,11 @@ import SmoothScroll from "./components/SmoothScroll";
 import Certificacion from './components/Certificacion';
 import FormContact from './components/FormContact';
 import Footer from './components/Footer';
+import Gallery from './components/Gallery';
+
+
+
+
 function App() {
   return (
     <>
@@ -24,7 +29,8 @@ function App() {
       <Certificacion />
      <Enterprise />
 
-      <Culinary /> 
+      {/* <Culinary />  */}
+<Gallery />
 
       <FormContact />
       <Footer />

@@ -10,7 +10,7 @@ import Certificacion from './components/Certificacion';
 import FormContact from './components/FormContact';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
-
+import Sustentabilidad from './components/Sustentabilidad';
 
 
 
@@ -27,9 +27,11 @@ function App() {
       <About />
 
       <Certificacion />
-     <Enterprise />
+      <Sustentabilidad />
 
-      {/* <Culinary />  */}
+     <Enterprise />   
+
+     <Culinary />  
 <Gallery />
 
       <FormContact />

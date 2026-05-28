@@ -17,11 +17,11 @@ function Hero() {
       <div className="hero-content">
 
         <p className="hero-subtitle">
-          Catering Corporativo 
+         Catering Corporativo
         </p>
 
         <h1>
-          Experiencias gastronómicas
+          Servicios gastronómicos
           <br />
           para empresas 
         </h1>

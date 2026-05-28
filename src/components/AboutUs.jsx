@@ -2,7 +2,7 @@ import "../styles/AboutUs.css";
 
 import { motion } from "framer-motion";
 
-import logo from "../assets/logo.svg";
+import logo from "../assets/Logo_deCatering-invert.svg";
 import aboutImage from "../assets/aboutIMG.webp";
 
 function About() {

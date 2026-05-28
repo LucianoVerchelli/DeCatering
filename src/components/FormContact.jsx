@@ -121,7 +121,7 @@ function Contact() {
 
             <button type="submit">
 
-              Solicitar contacto
+              Enviar mensaje
 
             </button>
 

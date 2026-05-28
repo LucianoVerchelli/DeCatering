@@ -39,7 +39,7 @@ body{
 
   border-radius: 22px;
 
-  background: #f4efe9;
+  background: #0c0c0c;
 
   backdrop-filter: blur(10px);
 
@@ -56,9 +56,9 @@ body{
 
   top: 10px;
 
-  height: 70px;
+  height: 85px;
 
-  background: rgba(20,20,20,0.72);
+  background: rgba(20, 20, 20, 0.568);
 
   backdrop-filter: blur(18px);
 
@@ -80,7 +80,7 @@ body{
 
 .navbar.active .logo img{
 
-  width: 210px;
+  width: 250px;
 }
 
 /* NAV */
@@ -103,6 +103,8 @@ body{
 
 .nav-links a{
 
+  position: relative;
+
   text-decoration: none;
 
   color: #a69585;
@@ -111,12 +113,52 @@ body{
 
   font-weight: bold;
 
-  transition: 0.3s ease;
+  transition: 
+    color 0.3s ease,
+    transform 0.3s ease;
 }
+
+/* LINEA PREMIUM */
+
+.nav-links a::after{
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -8px;
+
+  transform: translateX(-50%);
+
+  width: 0%;
+
+  height: 1.5px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    #d6b98c,
+    transparent
+  );
+
+  transition: width 0.35s ease;
+}
+
+/* HOVER */
 
 .nav-links a:hover{
 
-  opacity: 0.7;
+  color: #ffffff;
+
+  transform: scale(1.05);
+}
+
+.nav-links a:hover::after{
+
+  width: 100%;
 }
 
 /* BOTON */

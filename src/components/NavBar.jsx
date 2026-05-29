@@ -1,6 +1,7 @@
 import "../styles/Navbar.css";
 
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
@@ -12,6 +13,8 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const [servicesOpen, setServicesOpen] = useState(false)
 
   useEffect(() => {
 
@@ -51,11 +54,52 @@ function Navbar() {
 
           <ul className="nav-links">
 
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#services">Servicios</a></li>
-            <li><a href="#about">Nosotros</a></li>
+            <li><Link to="/">
+  Inicio
+</Link></li>
+            <li
+  className="services-dropdown"
+  onMouseEnter={() => setServicesOpen(true)}
+  onMouseLeave={() => setServicesOpen(false)}
+>
+
+  <span className="services-link">
+    Servicios
+  </span>
+
+  <div
+    className={
+      servicesOpen
+        ? "dropdown-menu active"
+        : "dropdown-menu"
+    }
+  >
+ <Link to="/servicios/viandasParaEmpresas">
+  Viandas Termoselladas
+</Link>
+
+ <Link to="/servicios/comedoresInSitu">
+  Comedores In Situ
+</Link>
+
+
+   <Link to="/servicios/CateringAsistido">
+  Catering Con Asistencia
+</Link>
+      
+    
+
+   
+
+   
+
+  </div>
+
+</li>
+            {/* <li><a href="#about">Nosotros</a></li> */}
             <li><a href="#certifications">Certificaciones</a></li>
             <li><a href="#sustainability">Sustentabilidad</a></li>
+            <li><a href="#presentations">Presentaciones</a></li>
             <li><a href="#contact">Contacto</a></li>
 
           </ul>
@@ -92,7 +136,9 @@ function Navbar() {
 
         <ul>
 
-          <li><a href="#home">Inicio</a></li>
+<Link to="/">
+  Inicio
+</Link>
           <li><a href="#services">Servicios</a></li>
           <li><a href="#about">Nosotros</a></li>
           <li><a href="#certifications">Certificaciones</a></li>

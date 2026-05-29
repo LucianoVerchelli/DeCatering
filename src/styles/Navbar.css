@@ -10,7 +10,6 @@ body{
 
   font-family: 'Poppins', sans-serif;
 
-  min-height: 300vh;
 
   overflow-x: hidden;
 }
@@ -58,7 +57,7 @@ body{
 
   height: 85px;
 
-  background: rgba(20, 20, 20, 0.568);
+  background: rgba(20, 20, 20, 0.986);
 
   backdrop-filter: blur(18px);
 
@@ -99,6 +98,91 @@ body{
   gap: 35px;
 
   list-style: none;
+}
+.services-dropdown{
+
+  position: relative;
+
+  cursor: pointer;
+}
+
+.services-link{
+
+  color: #a69585;
+
+  font-size: 0.95rem;
+
+  font-weight: bold;
+
+  transition: 0.3s ease;
+}
+
+.services-link:hover{
+
+  color: white;
+}
+
+.dropdown-menu{
+
+  position: absolute;
+
+  top: 35px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%)
+    translateY(15px);
+
+  min-width: 280px;
+
+  padding: 15px;
+
+
+  background:
+    rgb(12, 12, 12);
+
+    
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition: 0.35s ease;
+
+  z-index: 1000;
+}
+
+.dropdown-menu.active{
+
+  opacity: 1;
+
+  visibility: visible;
+    background: rgb(21, 21, 20); 
+
+  transform:
+    translateX(-50%)
+    translateY(0);
+}
+
+.dropdown-menu a{
+
+  display: block;
+
+  padding: 14px 18px;
+
+  border-radius: 14px;
+
+  text-decoration: none;
+
+  color: white;
+
+  transition: 0.3s ease;
+}
+
+.dropdown-menu a:hover{
+
+  color:
+    #d6b98c;
 }
 
 .nav-links a{

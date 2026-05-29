@@ -1,0 +1,171 @@
+.service-intro{
+
+  width: 90%;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding-top: 180px;
+
+  padding-bottom: 120px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+.service-text span{
+
+  color: #a69585;
+
+  letter-spacing: 4px;
+
+  font-size: 0.8rem;
+}
+
+.service-text h1{
+
+  color: white;
+
+  font-size: 4rem;
+
+  margin: 20px 0;
+}
+
+.service-text p{
+
+  color: rgba(255,255,255,0.75);
+
+  line-height: 1.9;
+
+  font-size: 1rem;
+}
+
+.service-image{
+
+  border-radius: 40px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  background: rgba(255,255,255,0.03);
+
+  backdrop-filter: blur(10px);
+}
+
+.service-image img{
+
+  width: 100%;
+
+  height: 500px;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.cta-contacto {
+  padding: 120px 20px;
+  background: linear-gradient(
+    135deg,
+    #1b1b1b 0%,
+    #242424 100%
+  );
+}
+
+.cta-contacto-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-tag {
+  display: inline-block;
+  color: #f4b400;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.cta-contacto h2 {
+  color: white;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.cta-contacto p {
+  color: rgba(255,255,255,.75);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px 38px;
+
+  background: #f4b400;
+  color: #111;
+
+  border-radius: 999px;
+
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: all .3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(244,180,0,.3);
+}
+
+@media(max-width: 992px){
+
+  .service-intro{
+
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .service-text h1{
+
+    font-size: 3rem;
+  }
+
+}
+
+@media(max-width: 768px){
+
+  .service-intro{
+
+    padding-top: 140px;
+
+    padding-bottom: 80px;
+  }
+
+  .service-text h1{
+
+    font-size: 2.4rem;
+  }
+
+  .service-image img{
+
+    height: 300px;
+  }
+
+}

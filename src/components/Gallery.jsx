@@ -41,7 +41,7 @@ function Gallery() {
 
   return (
 
-    <section className="gallery">
+    <section className="gallery" id="presentations">
 
       <div className="gallery-header">
 

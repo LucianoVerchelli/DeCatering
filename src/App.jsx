@@ -1,46 +1,49 @@
-import { useState } from 'react'
-import Navbar from "./components/NavBar";
-import Hero from './components/Hero';
-import About from './components/AboutUs';
-import Culinary from './components/Culinary';
-import Services from './components/Services';
-import Enterprise from './components/Enfoque';
-import SmoothScroll from "./components/SmoothScroll";
-import Certificacion from './components/Certificacion';
-import FormContact from './components/FormContact';
-import Footer from './components/Footer';
-import Gallery from './components/Gallery';
-import Sustentabilidad from './components/Sustentabilidad';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
-
+import Home from "./pages/Home";
+import Catering from "./pages/cateringAsistido";
+import Comedores from "./pages/comedoresInSitu";
+import Viandas from "./pages/ViandasParaEmpresas";
 
 function App() {
+
   return (
-    <>
 
-      <SmoothScroll />
+   <BrowserRouter basename="/DeCatering">
 
-      <Navbar />
-      <Hero />
-      
-      <Services /> 
-      <About />
+      <Routes>
 
-      <Certificacion />
-      <Sustentabilidad />
+        <Route
+          path="/"
+          element={<Home />}
+        />
 
-     <Enterprise />   
+        <Route path="*" element={<h1>Ruta no encontrada</h1>} />
 
-     <Culinary />  
-<Gallery />
+                    <Route
+              path="/servicios/CateringAsistido"
+              element={<Catering />}
+            />
 
-      <FormContact />
-      <Footer />
-      
-    </>
+            <Route
+              path="/servicios/comedoresInSitu"
+              element={<Comedores />}
+            />
+
+            <Route
+              path="/servicios/viandasParaEmpresas"
+              element={<Viandas />}
+            />
+
+      </Routes>
+
+    </BrowserRouter>
+
   );
 }
 
-
-
-export default App
+export default App;

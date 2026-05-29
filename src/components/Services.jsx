@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import img1 from "../assets/viandas.webp";
 import img2 from "../assets/inSitu.webp";
 import img3 from "../assets/asistido.webp";
+import { Link } from "react-router-dom";
 
 function Services() {
 
@@ -49,7 +50,7 @@ function Services() {
           <div className="service-content">
 
             <h3>
-              Viandas para empresas
+              Viandas Termoselladas
             </h3>
 
             <p>
@@ -57,15 +58,12 @@ function Services() {
               diseñados para equipos de trabajo.
             </p>
 
-            <button className="service-btn">
-
+    <Link
+  to="/servicios/viandasParaEmpresas"
+  className="service-btn"
+>
   Ver más
-
-  <span>
-    ↗
-  </span>
-
-</button> 
+</Link>
 
           </div>
 
@@ -99,16 +97,13 @@ function Services() {
               dentro de tu empresa.
             </p>
             
-        
-        <button className="service-btn">
+      <Link
+  to="/servicios/comedoresInSitu"
+  className="service-btn"
+>
+  Ver más
+</Link>
 
-            Ver más
-
-          <span>
-           ↗
-          </span>
-
-</button>
           </div>
 
         </motion.div>
@@ -133,22 +128,19 @@ function Services() {
           <div className="service-content">
 
             <h3>
-              Catering Asistido
+              Catering Con Asistencia
             </h3>
 
             <p>
-              Eventos empresariales con
+              Catering empresariales con
               asistencia profesional y presentación de calidad.
             </p>
-<button className="service-btn">
-
+    <Link
+  to="/servicios/CateringAsistido"
+  className="service-btn"
+>
   Ver más
-
-  <span>
-    ↗
-  </span>
-
-</button>
+</Link>
           </div>
 
         </motion.div>

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Navbar from "../components/Navbar";
 import Hero from '../components/Hero';
 import About from '../components/AboutUs';
-import Culinary from '../components/Culinary';
+
 import Services from '../components/Services';
 import Enterprise from '../components/Enfoque';
 import SmoothScroll from "../components/SmoothScroll";
@@ -45,7 +45,7 @@ useEffect(() => {
 
      <Enterprise />   
 
-     {/* <Culinary />   */}
+    
      <Gallery />
 
       <FormContact />

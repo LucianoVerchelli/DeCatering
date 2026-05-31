@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
+import { lenisInstance } from "./SmoothScroll";
 
 import logo from "../assets/logo.svg";
 
@@ -17,6 +18,18 @@ function Navbar() {
 
   const [servicesOpen, setServicesOpen] = useState(false);
   const navigate = useNavigate();
+
+ const scrollToSection = (id) => {
+  const element = document.getElementById(id);
+
+  if (!element) return;
+
+  lenisInstance?.scrollTo(element, {
+    offset: -130,
+    duration: 1.2,
+  });
+};
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -25,6 +38,8 @@ function Navbar() {
         setScrolled(false);
       }
     };
+
+
 
     window.addEventListener("scroll", handleScroll);
 
@@ -95,16 +110,16 @@ function Navbar() {
               </div>
             </li>
             {/* <li><a href="#about">Nosotros</a></li> */}
-            <li>
+            <li onClick={() => scrollToSection("certifications")}>
               <a href="#certifications">Certificaciones</a>
             </li>
-            <li>
+            <li onClick={() => scrollToSection("sustainability")}>
               <a href="#sustainability">Gestion Ambiental</a>
             </li>
-            <li>
+            <li onClick={() => scrollToSection("gallery")}>
               <a href="#presentations">Presentaciones</a>
             </li>
-            <li>
+            <li onClick={() => scrollToSection("contact")}>
               <a href="#contact">Contacto</a>
             </li>
           </ul>

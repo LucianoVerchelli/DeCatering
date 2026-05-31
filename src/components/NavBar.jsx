@@ -1,5 +1,5 @@
 import "../styles/Navbar.css";
-
+import SocialLinks from "./SocialLinks";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -7,6 +7,7 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 
 import logo from "../assets/logo.svg";
+import { icons } from "lucide-react";
 
 function Navbar() {
 
@@ -106,11 +107,9 @@ function Navbar() {
 
         </nav>
 
-        {/* BOTON */}
+        {/* social links de ig y linkedin */}
 
-        <button className="nav-btn">
-          Cotizar
-        </button>
+        <SocialLinks />
 
         {/* MENU MOBILE */}
 

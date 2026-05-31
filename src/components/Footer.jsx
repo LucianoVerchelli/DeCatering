@@ -1,3 +1,5 @@
+import SocialLinks from "./SocialLinks";
+
 import "../styles/Footer.css";
 
 import logo from "../assets/logo.svg";
@@ -88,7 +90,7 @@ function Footer() {
           </a>
 
         </div>
-
+  <SocialLinks />
       </div>
 
       {/* BOTTOM */}
@@ -98,6 +100,8 @@ function Footer() {
         <p>
           © 2026 Todos los derechos reservados
         </p>
+
+
 
       </div>
 

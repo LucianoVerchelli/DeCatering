@@ -1,16 +1,24 @@
+
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
+
 function Viandas() {
 
   return (
 
     <section
-      style={{
-        minHeight: "100vh",
-        background: "#111",
-        color: "white"
-      }}
+      
     >
 
-      <h1>Viandas para Empresas</h1>
+      <Navbar/>
+    <sectionx>
+
+      <h1>Viandas termoselladas</h1>
+
+    </sectionx>
+
+<Footer/>
 
     </section>
 

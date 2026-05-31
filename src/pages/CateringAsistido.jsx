@@ -66,7 +66,7 @@ const irAContacto = () => {
   className="cta-button"
   onClick={irAContacto}
 >
-  Solicitar propuesta
+  Solicitar presupuesto
 </button>
 
 

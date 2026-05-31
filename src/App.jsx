@@ -22,6 +22,7 @@ function App() {
           element={<Home />}
         />
 
+
         <Route path="*" element={<h1>Ruta no encontrada</h1>} />
 
                     <Route

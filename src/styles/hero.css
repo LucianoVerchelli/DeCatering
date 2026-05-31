@@ -3,52 +3,72 @@ body{
 }
 
 .hero{
-
   position: relative;
-
   width: 100%;
-
   height: 100vh;
 
-  min-height: 100svh;
-
-  background-size: cover;
-
-  background-position: center;
-
-  background-repeat: no-repeat;
+  overflow: hidden;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hero-background{
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+}
+
+..hero-slider{
+
+  position: absolute;
+
+  inset: 0;
 
   overflow: hidden;
 
-  animation: cinematicHero 25s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+.hero-slide{
+
+  position: absolute;
+
+  inset: 0;
+
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0;
+
+  transition:
+    opacity 1.5s ease;
+
+  transform: scale(1);
+
+  pointer-events: none;
+}
+
+.hero-slide.active{
+
+  opacity: 1;
+
+  animation: heroZoom 6s linear forwards;
 }
 
 
-@keyframes cinematicHero{
+@keyframes heroZoom{
 
-  0%{
-
-    background-size: 100%;
-
-    background-position: center center;
+  from{
+    transform: scale(1);
   }
 
-  50%{
-
-    background-size: 110%;
-
-    background-position: center top;
-  }
-
-  100%{
-
-    background-size: 120%;
-
-    background-position: center center;
+  to{
+    transform: scale(1.12);
   }
 
 }
@@ -59,13 +79,17 @@ body{
 
   position: absolute;
 
-  width: 100%;
-  height: 100%;
+  inset: 0;
 
-  background: rgba(0,0,0,0.45);
+  z-index: 1;
 
-  top: 0;
-  left: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.75) 0%,
+      rgba(0,0,0,.55) 50%,
+      rgba(0,0,0,.45) 100%
+    );
 }
 
 /* CONTENIDO */
@@ -151,14 +175,21 @@ body{
   .hero-content h1{
     font-size: 2.8rem;
   }
- .hero{
+ .hero-background{
 
-    animation: none;
+  display: none;
+}
 
-    background-size: cover;
+.hero{
 
-    background-position: center;
-  }
+  background-image: url("../assets/hero1.webp");
+
+  background-size: cover;
+
+  background-position: center;
+
+  animation: none;
+}
   
 
 }

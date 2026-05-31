@@ -15,6 +15,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import ScrollTopButton from "../components/ScrollTopButton";
 
+import Testimonials from '../components/Testimonials';
+
 import ScrollToTop from './ScrollToTop';
 function Home() {
 
@@ -43,9 +45,11 @@ useEffect(() => {
     <Certificacion />
     <Sustentabilidad />
 
+<Testimonials />
+
      <Enterprise />   
 
-    
+  
      <Gallery />
 
       <FormContact />

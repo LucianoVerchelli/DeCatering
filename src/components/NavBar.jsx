@@ -10,7 +10,6 @@ import { lenisInstance } from "./SmoothScroll";
 
 import logo from "../assets/logo.svg";
 
-
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -19,16 +18,16 @@ function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const navigate = useNavigate();
 
- const scrollToSection = (id) => {
-  const element = document.getElementById(id);
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
 
-  if (!element) return;
+    if (!element) return;
 
-  lenisInstance?.scrollTo(element, {
-    offset: -130,
-    duration: 1.2,
-  });
-};
+    lenisInstance?.scrollTo(element, {
+      offset: -130,
+      duration: 1.2,
+    });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,8 +37,6 @@ function Navbar() {
         setScrolled(false);
       }
     };
-
-
 
     window.addEventListener("scroll", handleScroll);
 
@@ -53,43 +50,38 @@ function Navbar() {
       <header className={scrolled ? "navbar active" : "navbar"}>
         {/* LOGO */}
 
-   <Link
-  to="/"
-  className="logo"
-  onClick={() => {
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-
-  }}
->
-  <img src={logo} alt="logo" />
-</Link>
+        <Link
+          to="/"
+          className="logo"
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
+          <img src={logo} alt="logo" />
+        </Link>
 
         {/* NAV DESKTOP */}
 
         <nav className="desktop-nav">
           <ul className="nav-links">
-            
             <li
               className="services-dropdown"
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <span className="services-link">Servicios
-                 <span
-    className={
-      servicesOpen
-        ? "dropdown-arrow active"
-        : "dropdown-arrow"
-    }
-  >
-    ▼
-  </span>
+              <span className="services-link">
+                Servicios
+                <span
+                  className={
+                    servicesOpen ? "dropdown-arrow active" : "dropdown-arrow"
+                  }
+                >
+                  ▼
+                </span>
               </span>
-
 
               <div
                 className={
@@ -119,6 +111,10 @@ function Navbar() {
             <li onClick={() => scrollToSection("gallery")}>
               <a href="#presentations">Presentaciones</a>
             </li>
+            <li onClick={() => scrollToSection("testimonials")}>
+              <a href="#opiniones">Testimonios</a>
+            </li>
+
             <li onClick={() => scrollToSection("contact")}>
               <a href="#contact">Contacto</a>
             </li>

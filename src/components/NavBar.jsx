@@ -99,7 +99,7 @@ function Navbar() {
 </li>
             {/* <li><a href="#about">Nosotros</a></li> */}
             <li><a href="#certifications">Certificaciones</a></li>
-            <li><a href="#sustainability">Sustentabilidad</a></li>
+            <li><a href="#sustainability">Gestion Ambiental</a></li>
             <li><a href="#presentations">Presentaciones</a></li>
             <li><a href="#contact">Contacto</a></li>
 

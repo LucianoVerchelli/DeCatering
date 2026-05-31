@@ -21,11 +21,10 @@ const irAContacto = () => {
   return (
 
     <>
-      <Navbar />
-
+     <Navbar/>
       <section className="service-intro">
 
-  <div className="service-text">
+<div className="service-text">
 
     <span>
       SERVICIO GASTRONÓMICO
@@ -69,7 +68,13 @@ const irAContacto = () => {
 
   </div>
 </section>
-      <Footer />
+   
+
+      
+
+<Footer/>
+
+  
     </>
   );
 }

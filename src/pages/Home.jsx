@@ -13,6 +13,9 @@ import Gallery from '../components/Gallery';
 import Sustentabilidad from '../components/Sustentabilidad';
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import ScrollTopButton from "../components/ScrollTopButton";
+
+import ScrollToTop from './ScrollToTop';
 function Home() {
 
 const location = useLocation();
@@ -47,6 +50,7 @@ useEffect(() => {
 
       <FormContact />
       <Footer />
+      <ScrollTopButton />
     </>
   );
 }

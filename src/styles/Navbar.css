@@ -82,6 +82,27 @@ body{
   width: 250px;
 }
 
+.logo{
+
+  display: flex;
+
+  align-items: center;
+
+  cursor: pointer;
+
+  text-decoration: none;
+}
+
+.logo img{
+
+  width: 250px;
+
+  object-fit: contain;
+
+
+}
+
+
 /* NAV */
 
 .desktop-nav{
@@ -108,13 +129,24 @@ body{
 
 .services-link{
 
+  display: flex;
+
+  align-items: center;
+
   color: #a69585;
 
-  font-size: 0.95rem;
+  font-size: .95rem;
 
   font-weight: bold;
 
-  transition: 0.3s ease;
+  cursor: pointer;
+
+  transition: .3s ease;
+}
+
+.services-link:hover{
+
+  color: #fff;
 }
 
 .services-link:hover{
@@ -126,28 +158,32 @@ body{
 
   position: absolute;
 
-  top: 35px;
+  top: calc(100% + 15px);
 
   left: 50%;
 
-  transform:
-    translateX(-50%)
-    translateY(15px);
+  transform: translateX(-50%) translateY(15px);
 
   min-width: 280px;
 
-  padding: 15px;
+  padding: 12px;
 
+  border-radius: 22px;
 
-  background:
-    rgb(12, 12, 12);
+  background: rgba(12,12,12,.95);
 
-    
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,.06);
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.35);
+
   opacity: 0;
 
   visibility: hidden;
 
-  transition: 0.35s ease;
+  transition: .35s ease;
 
   z-index: 1000;
 }
@@ -157,11 +193,8 @@ body{
   opacity: 1;
 
   visibility: visible;
-    background: rgb(21, 21, 20); 
 
-  transform:
-    translateX(-50%)
-    translateY(0);
+  transform: translateX(-50%) translateY(0);
 }
 
 .dropdown-menu a{
@@ -200,6 +233,22 @@ body{
   transition: 
     color 0.3s ease,
     transform 0.3s ease;
+}
+
+.dropdown-arrow{
+
+  margin-left: 10px;
+
+  font-size: 0.65rem;
+
+  color: #a69585;
+
+  transition: transform .3s ease;
+}
+
+.dropdown-arrow.active{
+
+  transform: rotate(180deg);
 }
 
 /* LINEA PREMIUM */

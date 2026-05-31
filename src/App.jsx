@@ -8,12 +8,15 @@ import Home from "./pages/Home";
 import Catering from "./pages/cateringAsistido";
 import Comedores from "./pages/comedoresInSitu";
 import Viandas from "./pages/ViandasParaEmpresas";
+import ScrollToTop from './pages/ScrollToTop';
 
 function App() {
 
   return (
 
    <BrowserRouter basename="/DeCatering">
+
+   <ScrollToTop />
 
       <Routes>
 

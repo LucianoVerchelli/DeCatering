@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import heroImage from "../assets/Hero.webp";
+import Asistido from "../assets/asistido.webp";
 
 import "../styles/subpages/CateringAsistido.css";
 
@@ -31,15 +31,11 @@ const irAContacto = () => {
     </span>
 
     <h1>
-      Catering Asistido
+      Catering Con Asistencia.
     </h1>
 
     <p>
-      Brindamos soluciones gastronómicas
-      para empresas, reuniones corporativas,
-      capacitaciones y eventos especiales,
-      garantizando calidad, puntualidad
-      y una experiencia profesional.
+    RELLENAR 
     </p>
 
   </div>
@@ -47,8 +43,8 @@ const irAContacto = () => {
   <div className="service-image">
 
     <img
-      src={heroImage}
-      alt="Catering Corporativo"
+      src={Asistido}
+      alt="Catering Con Asistencia"
     />
 
   </div>

@@ -80,7 +80,7 @@ function Navbar() {
 </Link>
 
  <Link to="/servicios/comedoresInSitu">
-  Comedores In Situ
+  Comedores Con Asistencia
 </Link>
 
 

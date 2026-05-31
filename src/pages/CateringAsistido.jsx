@@ -58,7 +58,7 @@ const irAContacto = () => {
   <div className="cta-contacto-content">
 
     <h2>
-      ¿Querés saber más sobre nuestro servicio de Catering Asistido?
+      ¿(FORMULAR PREGUNTA PERSUASIVA)?
     </h2>
 
 

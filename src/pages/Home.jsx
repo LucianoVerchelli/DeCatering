@@ -24,7 +24,7 @@ useEffect(() => {
         behavior: "smooth",
         block: "start",
       });
-    }, 50);
+    }, 10);
   }
 }, [location]);
   return (

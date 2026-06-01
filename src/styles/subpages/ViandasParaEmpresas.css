@@ -122,6 +122,10 @@
   transform: translateY(-3px);
 }
 
+.resaltado {
+  color: #a69585;
+}
+
 @media (max-width: 992px) {
   .service-intro {
     grid-template-columns: 1fr;

@@ -20,25 +20,25 @@ const items = [
   {
     icon: <Recycle size={42} />,
     text:
-      "Realizamos separación de residuos orgánicos e inorgánicos."
+      "Segmentación de residuos orgánicos e inorgánicos."
   },
 
   {
     icon: <Truck size={42} />,
     text:
-      "Gestionamos aceites y residuos mediante operadores habilitados."
+      "Gestión de retiro de aceites y residuos mediante operadores habilitados."
   },
 
   {
     icon: <Droplets size={42} />,
     text:
-      "Utilizamos productos biodegradables y reducción de químicos."
+      "Implementación de insumos biodegradables y sostenibles."
   },
 
   {
     icon: <ShieldCheck size={42} />,
     text:
-      "Aplicamos protocolos sanitarios alineados con normas corporativas."
+      "Aplicamos protocolos alineados con las normas de nuestros clientes."
   },
 
   {
@@ -57,9 +57,6 @@ function GestionAmbiental() {
 
       <div className="ambiental-header">
 
-        <span>
-          SUSTENTABILIDAD
-        </span>
 
         <h2>
           Gestión ambiental
@@ -67,7 +64,7 @@ function GestionAmbiental() {
 
         <p>
           Comprometidos con procesos responsables,
-          eficiencia operativa y sustentabilidad corporativa.
+          eficiencia operativa y sustentabilidad.
         </p>
 
       </div>

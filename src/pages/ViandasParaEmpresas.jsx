@@ -22,12 +22,12 @@ function Viandas() {
       <Navbar />
       <section className="service-intro">
         <div className="service-text">
-          <span>SERVICIO GASTRONÓMICO</span>
+          
 
           <h1>Viandas Termoselladas.</h1>
 
           <p>
-          (rellenar con informacion)
+          <span className="resaltado">texto a resaltar variedad e rotulado en las viandas con nombre y fecha de vencimiento</span>
           </p>
         </div>
 

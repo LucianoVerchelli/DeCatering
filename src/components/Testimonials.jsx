@@ -18,7 +18,7 @@ function Testimonials() {
     },
 
     {
-      text: "La variedad de menús y la atención personalizada marcan la diferencia.",
+      text: "Muy buena variedad de platos, super facil pedir desde la app.",
       author: "Gerencia General",
       company: "Industria Alimenticia"
     }
@@ -47,15 +47,15 @@ function Testimonials() {
 
       <div className="testimonials-header">
 
-        <span>TESTIMONIOS</span>
+        <span>Casos De Exito</span>
 
         <h2>
-          Lo que dicen nuestros clientes
+          nuestros clientes dicen
         </h2>
 
         <p>
-          Empresas de distintos rubros confían
-          diariamente en nuestras soluciones gastronómicas.
+          Empresas de diversos rubros confían
+          diariamente en nuestras soluciones.
         </p>
 
       </div>

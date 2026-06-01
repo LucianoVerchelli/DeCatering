@@ -10,7 +10,7 @@ function Certificacion() {
       <div className="certifications-header">
         <span>CERTIFICACIONES</span>
 
-        <h2>Compromiso con la calidad y seguridad alimentaria</h2>
+        <h2>Calidad y Seguridad Alimentaria</h2>
       </div>
 
       <motion.div
@@ -38,7 +38,7 @@ function Certificacion() {
 
         <p>
           Nuestra operación trabaja bajo certificación IRAM 14201, aplicando
-          estrictos protocolos sanitarios, trazabilidad y Buenas Prácticas de
+          estrictos protocolos sanitarios y trazabilidad. Buenas Prácticas de
           Manufactura para garantizar calidad, higiene y control integral en
           cada servicio.
         </p>

@@ -58,7 +58,7 @@ function Hero() {
       <div className="hero-content">
 
         <p className="hero-subtitle">
-          Catering Corporativo
+         Alimentación Empresarial 
         </p>
 
         <h1>

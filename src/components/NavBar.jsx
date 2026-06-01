@@ -93,11 +93,11 @@ function Navbar() {
                 </Link>
 
                 <Link to="/servicios/comedoresInSitu">
-                  Comedores Con Asistencia
+                 Viandas Con Asistencia
                 </Link>
 
                 <Link to="/servicios/CateringAsistido">
-                  Catering Con Asistencia
+                  Comedores - Gestion Integral
                 </Link>
               </div>
             </li>

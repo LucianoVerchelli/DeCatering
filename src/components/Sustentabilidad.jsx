@@ -6,6 +6,7 @@ import {
   Truck,
   Droplets,
   ShieldCheck,
+  Sprout,
   Factory
 } from "lucide-react";
 
@@ -30,9 +31,9 @@ const items = [
   },
 
   {
-    icon: <Droplets size={42} />,
+    icon: <Sprout size={42} />,
     text:
-      "Implementación de insumos biodegradables y sostenibles."
+      "Utilizamos hortalizas peladas a fin de evitar residuos por cáscaras."
   },
 
   {
@@ -44,7 +45,7 @@ const items = [
   {
     icon: <Factory size={42} />,
     text:
-      "Minimizamos descartables y optimizamos recursos operativos."
+      "Minimizamos descartables y optimizamos recursos operativos. Ademas utilizamos insumos biodegradables y sostenibles."
   }
 
 ];

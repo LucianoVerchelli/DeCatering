@@ -2,7 +2,8 @@ import { useState } from 'react'
 import Navbar from "../components/Navbar";
 import Hero from '../components/Hero';
 import About from '../components/AboutUs';
-
+import WorkFlow from '../components/WorkFlow';
+import CtaSection from '../components/CtaSection';
 import Services from '../components/Services';
 import Enterprise from '../components/Enfoque';
 import SmoothScroll from "../components/SmoothScroll";
@@ -38,19 +39,18 @@ useEffect(() => {
 
     <Navbar />
     <Hero />
-      
     <Services /> 
     {/* <About /> */}
+  
 
     <Certificacion />
     <Sustentabilidad />
+    <WorkFlow />
+    <CtaSection />
 
 <Testimonials />
-
-     <Enterprise />   
-
-  
-     <Gallery />
+<Enterprise />   
+<Gallery />
 
       <FormContact />
       <Footer />

@@ -2,7 +2,7 @@ import SocialLinks from "./SocialLinks";
 
 import "../styles/Footer.css";
 
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo-2-variante.svg";
 
 function Footer() {
 

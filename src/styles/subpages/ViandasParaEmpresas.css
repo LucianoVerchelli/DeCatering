@@ -1,4 +1,13 @@
-.service-intro {
+/* =========================
+   CONTENEDOR GENERAL
+========================= */
+
+.titulo-comedores{
+  font-size: 4rem;
+}
+
+.service-showcase{
+
   width: 90%;
 
   max-width: 1400px;
@@ -7,149 +16,391 @@
 
   padding-top: 180px;
 
-  padding-bottom: 120px;
+  padding-bottom: 140px;
+}
 
-  display: grid;
+/* =========================
+   HERO SERVICIO
+========================= */
 
-  grid-template-columns: 1fr 1fr;
+.hero-service{
+
+  margin-bottom: 120px;
+}
+
+.hero-service-top{
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
 
   gap: 80px;
 
-  align-items: center;
+  margin-bottom: 60px;
 }
 
-.service-text span {
+/* TITULO */
+
+.hero-service-title{
+
+  flex: 1;
+}
+
+.hero-service-title span{
+
   color: #a69585;
 
   letter-spacing: 4px;
 
-  font-size: 0.8rem;
+  font-size: .8rem;
 }
 
-.service-text h1 {
+.hero-service-title h1{
+
   color: white;
 
   font-size: 4rem;
 
-  margin: 20px 0;
+  line-height: .9;
+
+  margin-top: 20px;
 }
 
-.service-text p {
-  color: rgba(255, 255, 255, 0.75);
+/* DESCRIPCION */
 
-  line-height: 1.9;
+.hero-service-description{
+
+  flex: 1;
+
+  max-width: 500px;
+
+  display: none;
+}
+
+.hero-service-description p{
+
+  color: rgba(255,255,255,.72);
+
+  line-height: 2;
 
   font-size: 1rem;
 }
 
-.service-image {
-  border-radius: 40px;
+/* IMAGEN */
+
+.hero-service-image{
 
   overflow: hidden;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 40px;
 
-  background: rgba(255, 255, 255, 0.03);
-
-  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.06);
 }
 
-.service-image img {
+.hero-service-image img{
+
   width: 100%;
 
-  height: 500px;
+  height: 650px;
 
   object-fit: cover;
 
   display: block;
 }
 
-.cta-contacto {
-  padding: 120px 20px;
-  background: linear-gradient(135deg, #1b1b1b 0%, #242424 100%);
+/* =========================
+   CONTENIDO
+========================= */
+
+.showcase-content{
+
+  display: grid;
+
+  grid-template-columns: 1.2fr 0.8fr;
+
+  gap: 120px;
+
+  align-items: start;
+
+  margin-bottom: 120px;
 }
 
-.cta-contacto-content {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
+/* COLUMNAS */
+
+.showcase-left,
+.showcase-right{
+
+  position: relative;
+
+  padding-top: 35px;
 }
 
-.cta-tag {
-  display: inline-block;
-  color: #a69585;
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
+/* BAJA VISUALMENTE VENTAJAS
+   PARA ALINEARLA CON LOS BULLETS
+   DE COMO LO HACEMOS */
+
+.showcase-right{
+
+  margin-top: 5px;
 }
 
-.cta-contacto h2 {
-  color: white;
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  line-height: 1.2;
-  margin-bottom: 25px;
-}
+/* LINEA SUPERIOR */
 
-.cta-contacto p {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 1.1rem;
-  line-height: 1.8;
-  max-width: 700px;
-  margin: 0 auto 40px;
-}
+.showcase-left::before,
+.showcase-right::before{
 
-.cta-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  content: "";
 
-  padding: 18px 38px;
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 70px;
+
+  height: 1px;
 
   background: #a69585;
-  color: #111;
+}
+
+/* TITULOS */
+
+.showcase-left h2,
+.showcase-right h2{
+
+  color: #a69585;
+
+  font-size: 2rem;
+
+  font-weight: 500;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 30px;
+}
+
+/* TEXTO */
+
+.showcase-left p{
+
+  color: rgba(255,255,255,.72);
+
+  line-height: 2;
+
+  margin-bottom: 30px;
+}
+
+/* LISTAS */
+
+.showcase-left ul,
+.showcase-right ul{
+
+  list-style: none;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 28px;
+
+  margin-top: 35px;
+}
+
+.showcase-left li,
+.showcase-right li{
+
+  position: relative;
+
+  padding-left: 28px;
+
+  color: rgba(255,255,255,.82);
+
+  line-height: 1.8;
+}
+
+/* DIVISORES SOLO EN VENTAJAS */
+
+.showcase-right li{
+
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+/* BULLETS PREMIUM */
+
+.showcase-left li::before,
+.showcase-right li::before{
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0.85em;
+
+  transform: translateY(-50%);
+
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #a69585;
+
+  box-shadow:
+    0 0 12px rgba(166,149,133,.35);
+}
+
+/* HOVER */
+
+.showcase-left li:hover,
+.showcase-right li:hover{
+
+  color: white;
+
+  transition: .3s ease;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.service-cta-block{
+
+  border-top: 1px solid rgba(255,255,255,.08);
+
+  padding-top: 80px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 40px;
+}
+
+.service-cta-block span{
+
+  color: white;
+
+  font-size: clamp(1.8rem, 3vw, 3rem);
+
+  max-width: 700px;
+
+  line-height: 1.3;
+}
+
+.service-cta-btn{
+
+  border: none;
+
+  cursor: pointer;
+
+  padding: 16px 34px;
 
   border-radius: 999px;
 
+  background: #a69585;
+
+  color: #111;
+
   font-weight: 700;
-  text-decoration: none;
 
-  transition: all 0.3s ease;
+  transition: .3s ease;
 }
 
-.cta-button:hover {
-  transform: translateY(-3px);
+.service-cta-btn:hover{
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 40px rgba(166,149,133,.25);
 }
 
-.resaltado {
-  color: #a69585;
-}
+/* =========================
+   TABLET
+========================= */
 
-@media (max-width: 992px) {
-  .service-intro {
+@media(max-width: 992px){
+
+  .hero-service-top{
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 30px;
+  }
+
+  .hero-service-description{
+
+    max-width: 100%;
+  }
+
+  .showcase-content{
+
     grid-template-columns: 1fr;
 
-    gap: 50px;
+    gap: 70px;
   }
 
-  .service-text h1 {
-    font-size: 3rem;
+  .showcase-right{
+
+    margin-top: 0;
+  }
+
+  .showcase-left h2,
+  .showcase-right h2{
+
+    font-size: 1.8rem;
+  }
+
+  .service-cta-block{
+
+    flex-direction: column;
+
+    align-items: flex-start;
   }
 }
 
-@media (max-width: 768px) {
-  .service-intro {
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 768px){
+
+  .service-showcase{
+
     padding-top: 140px;
 
-    padding-bottom: 80px;
+    padding-bottom: 100px;
   }
 
-  .service-text h1 {
-    font-size: 2.4rem;
+  .hero-service-title h1{
+
+    font-size: 3rem;
   }
 
-  .service-image img {
-    height: 300px;
+  .hero-service-image img{
+
+    height: 350px;
+  }
+
+  .showcase-left h2,
+  .showcase-right h2{
+
+    font-size: 1.6rem;
+  }
+
+  .service-cta-btn{
+
+    width: 100%;
   }
 }

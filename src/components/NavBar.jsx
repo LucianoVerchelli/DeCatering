@@ -92,11 +92,11 @@ function Navbar() {
                   Viandas Termoselladas
                 </Link>
 
-                <Link to="/servicios/comedoresInSitu">
+                <Link to="/servicios/CateringAsistido">
                  Viandas Con Asistencia
                 </Link>
 
-                <Link to="/servicios/CateringAsistido">
+                <Link to="/servicios/ComedoresInSitu">
                   Comedores - Gestion Integral
                 </Link>
               </div>

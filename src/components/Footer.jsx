@@ -24,8 +24,7 @@ function Footer() {
           />
 
           <p>
-           De Catering es una empresa especializada en servicios gastronómicos para empresas. Ofrece viandas diarias, gestión de comedores y catering con asistencia, combinando calidad, compromiso y un enfoque sustentable.
-          </p>
+De Catering brinda servicios de alimentación corporativa para empresas en Argentina. Nos especializamos en viandas corporativas, viandas termoselladas, gestión integral de comedores empresariales y catering con asistencia. Diseñamos soluciones gastronómicas adaptadas a cada organización, garantizando calidad, seguridad alimentaria y una operación eficiente para colaboradores y equipos de trabajo.          </p>
 
         </div>
 
@@ -49,6 +48,8 @@ function Footer() {
             Comedores in situ
           </a>
 
+          
+
         </div>
 
         {/* SHORTCUTS */}
@@ -69,6 +70,20 @@ function Footer() {
 
           <a href="#certifications">
             Certificaciones
+          </a>
+
+          <a href="#sustainability">
+            Gestion Ambiental
+          </a>
+
+          <a href="#presentations">
+            Presentaciones
+          </a>
+          <a href="#opiniones">
+            Testimonios
+          </a>
+          <a href="#contact">
+            Contacto 
           </a>
 
         </div>

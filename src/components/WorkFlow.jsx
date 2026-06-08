@@ -37,8 +37,7 @@ return (
         <h3>Diseño del Menú</h3>
 
         <p>
-          Elaboramos propuestas adaptadas a cada empresa
-          y sus necesidades nutricionales.
+          Menu diseñado por nuestros profesionales para satisfacer los diversos requerimientos nutricionales de su empresa.
         </p>
       </div>
     </div>
@@ -47,11 +46,22 @@ return (
       <div className="workflow-dot"></div>
 
       <div className="workflow-content">
-        <h3>Producción Diaria</h3>
+        <h3>Nutrición</h3>
 
         <p>
-          Procesos controlados bajo estrictos estándares
-          de calidad e higiene.
+          Nuestro menú diario entrega amplia variedad de sabores y opciones a su equipo de trabajo.
+        </p>
+      </div>
+    </div>
+
+    <div className="workflow-step">
+      <div className="workflow-dot"></div>
+
+      <div className="workflow-content">
+        <h3>App para pedidos</h3>
+
+        <p>
+          Simplificamos tu proceso de pedido, desde tu celular y en segundos.
         </p>
       </div>
     </div>
@@ -76,8 +86,7 @@ return (
         <h3>Seguimiento y Mejora Continua</h3>
 
         <p>
-          Escuchamos a nuestros clientes para optimizar
-          constantemente el servicio.
+         Innovación y mejora continúa basada en las sugerencias y necesidades del cliente junto a las nuevas tendencias de alimentación.
         </p>
       </div>
     </div>

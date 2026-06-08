@@ -187,14 +187,14 @@
 
 .certificacion-logo img{
 
-  width: 300px;
+  width: 200px;
 
   filter:
     drop-shadow(
       0 0 35px rgba(243,243,243,0.84)
     );
 
-  padding-bottom: 100px;
+  padding-bottom: 10px;
 }
 
 /* RESPONSIVE */

@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import Asistido from "../assets/asistido.webp";
+import Asistido from "../assets/img2.webp";
 
 import "../styles/subpages/CateringAsistido.css";
 
@@ -24,25 +24,30 @@ const irAContacto = () => {
 
       <section className="service-showcase">
               <div className="hero-service">
-                <div className="hero-service-top">
-                  <div className="hero-service-title">
-                    <span>DE CATERING</span>
-      
-                    <h1 className="titulo-comedores">
-                      Catering
-                      <br />
-                      Con Asistencia
-                    </h1>
-                  </div>
-      
-      
-                <div className="hero-service-image">
-                  <img
-                    src={Asistido}
-                    alt="Catering Con Asistencia - Servicios gastronómicos personalizados"
-                  />
-                </div>
-              </div>
+               <div className="hero-service-top">
+
+  <div className="hero-service-title">
+
+    <span>DE CATERING</span>
+
+    <h1 className="titulo-comedores">
+      Catering
+      <br />
+      Con Asistencia
+    </h1>
+
+  </div>
+
+</div>
+
+<div className="hero-service-image catering-imgage">
+
+  <img
+    src={Asistido}
+    alt="Catering Con Asistencia - Servicios gastronómicos personalizados"
+  />
+
+</div>
               </div>
       
               <div className="showcase-content">
@@ -86,9 +91,6 @@ const irAContacto = () => {
            <li>
          La atencion directa a los comensales mejora la experiencia del beneficio.
           </li>
-           <li>
-       Acciones en dias especiales para la empresa.
-      </li>
         </ul>
        
    

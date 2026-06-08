@@ -13,14 +13,11 @@ function CTASection() {
         </span>
 
         <h2>
-          ¿Listo para optimizar la experiencia
-          gastronómica de tu empresa?
+          ¿Buscás una solución gastronómica eficiente para tu empresa?
         </h2>
 
         <p>
-          Nuestro equipo diseña soluciones adaptadas a cada
-          organización, combinando calidad, logística
-          eficiente y atención humana personalizada.
+         Desarrollamos servicios adaptados a las necesidades de cada organización, garantizando calidad, cumplimiento operativo y una atención acorde a los estándares de tu compañía.
         </p>
 
         <div className="process-cta-actions">

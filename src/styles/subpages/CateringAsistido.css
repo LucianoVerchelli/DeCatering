@@ -90,14 +90,16 @@
 
 /* IMAGEN */
 
-.hero-service-image{
-
-  overflow: hidden;
-
-  border-radius: 40px;
-
-  border: 1px solid rgba(255,255,255,.06);
+.catering-image img{
+  height: 520px;
+  object-fit: cover;
+  object-position: center center;
 }
+
+/* .catering-image img{
+  aspect-ratio: 16 / 7;
+  height: auto;
+} */
 
 .hero-service-image img{
 
@@ -134,7 +136,7 @@
 
   position: relative;
 
-  padding-top: 35px;
+  padding-top: 30px;
 }
 
 

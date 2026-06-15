@@ -7,20 +7,20 @@ function Testimonials() {
 
     {
       text: "Excelente calidad en cada entrega. El equipo siempre responde con rapidez y profesionalismo.",
-      author: "Área de RRHH",
+      author: "Sofia zenker",
       company: "Industria Automotriz"
     },
 
     {
       text: "La puntualidad y organización son impecables. Hace años trabajamos juntos.",
-      author: "Departamento de Compras",
+      author: "Mariela Estevez",
       company: "Empresa Logística"
     },
 
     {
       text: "Muy buena variedad de platos, super facil pedir desde la app.",
-      author: "Gerencia General",
-      company: "Industria Alimenticia"
+      author: "Iñaki Ferner",
+      company: "Industria Tecnológica"
     }
 
   ];
@@ -47,14 +47,14 @@ function Testimonials() {
 
       <div className="testimonials-header">
 
-        <span>Casos De Exito</span>
+        
 
         <h2>
-          nuestros clientes dicen
+          Casos de Éxito
         </h2>
 
         <p>
-          Empresas de diversos rubros confían
+          Empresas de diversos rubros que confían
           diariamente en nuestras soluciones.
         </p>
 

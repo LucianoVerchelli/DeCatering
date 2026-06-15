@@ -14,7 +14,7 @@ function App() {
 
   return (
 
-   <BrowserRouter basename="/DeCatering">
+  <BrowserRouter>
 
    <ScrollToTop />
 

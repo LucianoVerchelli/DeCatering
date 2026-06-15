@@ -151,51 +151,63 @@ function Contact() {
         >
           <form className="contact-form" onSubmit={handleSubmit}>
             <input
+            htmlFor="nombre"
               type="text"
               name="nombre"
               placeholder="Nombre"
               value={formData.nombre}
               onChange={handleChange}
+              label="Nombre"
             />
 
             <input
+              htmlFor="apellido"  
               type="text"
               name="apellido"
               placeholder="Apellido"
               value={formData.apellido}
               onChange={handleChange}
+              label="Apellido"
             />
 
             <input
+              htmlFor="email" 
               type="email"
               name="email"
               placeholder="Email"
               value={formData.email}
               onChange={handleChange}
+              label="Email"
             />
 
             <input
+            htmlFor="empresa"
               type="text"
               name="empresa"
               placeholder="Empresa"
               value={formData.empresa}
               onChange={handleChange}
+              label="Empresa"
             />
 
             <input
+              htmlFor="cargo"
               type="text"
               name="cargo"
               placeholder="Cargo"
               value={formData.cargo}
               onChange={handleChange}
+              label="Cargo"
             />
 
             <textarea
+              htmlFor="mensaje"
               name="mensaje"
               placeholder="Mensaje"
               rows="6"
               value={formData.mensaje}
               onChange={handleChange}
+              label="Mensaje"
             ></textarea>
 
             {error && (

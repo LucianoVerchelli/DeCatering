@@ -7,7 +7,11 @@ import img2 from "../assets/img2.webp";
 import img3 from "../assets/img3.webp";
 
 function Hero() {
-
+const images = [
+    img1,
+    img2,
+    img3
+  ];
   const navigate = useNavigate();
 
   const irAContacto = () => {
@@ -19,11 +23,7 @@ function Hero() {
 
   };
 
-  const images = [
-    img1,
-    img2,
-    img3
-  ];
+  
 
   const [currentImage, setCurrentImage] = useState(0);
 

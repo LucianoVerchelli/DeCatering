@@ -60,6 +60,7 @@ function Gallery() {
         <button
           className="gallery-btn"
           onClick={prevSlide}
+          aria-label="Imagen anterior"
         >
           ←
         </button>
@@ -68,7 +69,7 @@ function Gallery() {
 
           <img
             src={images[current]}
-            alt=""
+            alt="imagenes de platos"
           />
 
         </div>
@@ -76,6 +77,7 @@ function Gallery() {
         <button
           className="gallery-btn"
           onClick={nextSlide}
+          aria-label="Imagen siguiente"
         >
           →
         </button>
@@ -100,7 +102,7 @@ function Gallery() {
 
           >
 
-            <img src={img} alt="" />
+            <img src={img} alt="Imagenes de Platos" />
 
           </div>
 

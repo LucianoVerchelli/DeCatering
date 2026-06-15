@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import About from "../components/AboutUs";
 import WorkFlow from "../components/WorkFlow";
 import CtaSection from "../components/CtaSection";
 import Services from "../components/Services";
@@ -51,7 +50,7 @@ function Home() {
 
       <Services />
 
-      {/* <About /> */}
+  
 
       <Certificacion />
 

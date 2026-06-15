@@ -60,13 +60,9 @@ De Catering brinda servicios de alimentación corporativa para empresas en Argen
             Atajos
           </h3>
 
-          <a href="#home">
-            Inicio
-          </a>
-
-          <a href="#about">
-            Nosotros
-          </a>
+        <Link to="/">
+  Inicio
+</Link>
 
           <a href="#certifications">
             Certificaciones

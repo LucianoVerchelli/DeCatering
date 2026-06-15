@@ -8,11 +8,12 @@ import { IoClose } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { lenisInstance } from "./SmoothScroll";
 
+
 import logo from "../assets/logo-2-variante.svg";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-
+const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -134,30 +135,128 @@ function Navbar() {
 
       {/* MOBILE MENU */}
 
-      <div className={menuOpen ? "mobile-menu active" : "mobile-menu"}>
-        <div className="close-menu" onClick={() => setMenuOpen(false)}>
-          <IoClose />
-        </div>
+    <div className={menuOpen ? "mobile-menu active" : "mobile-menu"}>
 
-        <ul>
-          <Link to="/">Inicio</Link>
-          <li>
-            <a href="#services">Servicios</a>
-          </li>
-          <li>
-            <a href="#about">Nosotros</a>
-          </li>
-          <li>
-            <a href="#certifications">Certificaciones</a>
-          </li>
-          <li>
-            <a href="#sustainability">Sustentabilidad</a>
-          </li>
-          <li>
-            <a href="#contact">Contacto</a>
-          </li>
-        </ul>
+  <div
+    className="close-menu"
+    onClick={() => setMenuOpen(false)}
+  >
+    <IoClose />
+  </div>
+
+  <ul>
+
+    <li>
+      <Link
+        to="/"
+        onClick={() => setMenuOpen(false)}
+      >
+        Inicio
+      </Link>
+    </li>
+
+    <li className="mobile-services">
+
+      <button
+        className="mobile-services-btn"
+        onClick={() =>
+          setMobileServicesOpen(!mobileServicesOpen)
+        }
+      >
+        Servicios
+
+        <span
+          className={
+            mobileServicesOpen
+              ? "mobile-arrow active"
+              : "mobile-arrow"
+          }
+        >
+          ▼
+        </span>
+      </button>
+
+      <div
+        className={
+          mobileServicesOpen
+            ? "mobile-services-dropdown active"
+            : "mobile-services-dropdown"
+        }
+      >
+
+        <Link
+          to="/servicios/viandasParaEmpresas"
+          onClick={() => setMenuOpen(false)}
+        >
+          Viandas Termoselladas
+        </Link>
+
+        <Link
+          to="/servicios/CateringAsistido"
+          onClick={() => setMenuOpen(false)}
+        >
+          Viandas Con Asistencia
+        </Link>
+
+        <Link
+          to="/servicios/ComedoresInSitu"
+          onClick={() => setMenuOpen(false)}
+        >
+          Comedores - Gestión Integral
+        </Link>
+
       </div>
+
+    </li>
+
+    <li>
+      <a
+        href="#certifications"
+        onClick={() => setMenuOpen(false)}
+      >
+        Certificaciones
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="#sustainability"
+        onClick={() => setMenuOpen(false)}
+      >
+        Gestión Ambiental
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="#presentations"
+        onClick={() => setMenuOpen(false)}
+      >
+        Presentaciones
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="#opiniones"
+        onClick={() => setMenuOpen(false)}
+      >
+        Testimonios
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="#contact"
+        onClick={() => setMenuOpen(false)}
+      >
+        Contacto
+      </a>
+    </li>
+
+  </ul>
+
+</div>
     </>
   );
 }

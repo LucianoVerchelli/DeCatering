@@ -8,7 +8,7 @@ function SocialLinks() {
         href="https://linkedin.com/in/tu-usuario" 
         target="_blank" 
         rel="noopener noreferrer"
-        style={{ color: '#0077B5', transition: 'transform 0.2s' }}
+        style={{ color: '#0077B5', transition: 'transform 0.2s', fontSize: '24px' }}
       >
         <FaLinkedin />
       </a>
@@ -18,7 +18,7 @@ function SocialLinks() {
         href="https://instagram.com/decatering.empresarial" 
         target="_blank" 
         rel="noopener noreferrer"
-        style={{ color: '#E1306C', transition: 'transform 0.2s' }}
+        style={{ color: '#E1306C', transition: 'transform 0.2s', fontSize: '24px' }}
       >
         <FaInstagram />
       </a>

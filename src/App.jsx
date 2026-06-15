@@ -9,7 +9,7 @@ import Catering from "./pages/cateringAsistido";
 import Comedores from "./pages/comedoresInSitu";
 import Viandas from "./pages/ViandasParaEmpresas";
 import ScrollToTop from './pages/ScrollToTop';
-
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 function App() {
 
   return (
@@ -42,6 +42,11 @@ function App() {
               path="/servicios/viandasParaEmpresas"
               element={<Viandas />}
             />
+
+            <Route
+  path="/politica-de-privacidad"
+  element={<PrivacyPolicy />}
+/>
 
       </Routes>
 

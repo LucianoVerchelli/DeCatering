@@ -70,7 +70,9 @@ body{
 
 .logo img{
 
-  width: 250px;
+  width: 200px;
+
+  color: #a69585;
 
   object-fit: contain;
 

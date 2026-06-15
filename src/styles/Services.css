@@ -133,6 +133,7 @@
 
 .service-btn{
 
+  text-decoration: none;
   margin-top: 35px;
 
   display: inline-flex;

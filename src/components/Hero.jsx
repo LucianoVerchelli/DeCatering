@@ -1,5 +1,6 @@
 import "../styles/Hero.css";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import img1 from "../assets/img1.webp";
 import img2 from "../assets/img2.webp";
@@ -7,8 +8,19 @@ import img3 from "../assets/img3.webp";
 
 function Hero() {
 
+  const navigate = useNavigate();
+
+  const irAContacto = () => {
+
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+  };
+
   const images = [
-   img1,
+    img1,
     img2,
     img3
   ];
@@ -58,7 +70,7 @@ function Hero() {
       <div className="hero-content">
 
         <p className="hero-subtitle">
-         Alimentación Empresarial 
+          Alimentación Empresarial
         </p>
 
         <h1>
@@ -67,7 +79,10 @@ function Hero() {
           para empresas
         </h1>
 
-        <button>
+        <button
+          className="hero-button"
+          onClick={irAContacto}
+        >
           Solicitar presupuesto
         </button>
 

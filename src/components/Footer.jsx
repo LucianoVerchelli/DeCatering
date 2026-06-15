@@ -1,7 +1,7 @@
 import SocialLinks from "./SocialLinks";
 
 import "../styles/Footer.css";
-
+import { Link } from "react-router-dom";
 import logo from "../assets/logo-2-variante.svg";
 
 function Footer() {
@@ -85,6 +85,9 @@ De Catering brinda servicios de alimentación corporativa para empresas en Argen
           <a href="#contact">
             Contacto 
           </a>
+<Link to="/politica-de-privacidad">
+  Política de Privacidad
+</Link>
 
         </div>
 
@@ -96,16 +99,22 @@ De Catering brinda servicios de alimentación corporativa para empresas en Argen
             Escribinos
           </h3>
 
-          <a href="#">
+          <p>
             contacto@email.com
-          </a>
+          </p>
 
-          <a href="#">
+          <p >
             Buenos Aires, Argentina
-          </a>
+          </p>
 
+          <p>
+            Lun-Vie 9:00 - 17:00
+          </p>
+          <div className="social-links-footer">
+              <SocialLinks />
+          </div>
         </div>
-  <SocialLinks />
+
       </div>
 
       {/* BOTTOM */}

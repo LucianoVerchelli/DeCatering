@@ -1,62 +1,81 @@
-import { useState } from 'react'
+import { useState } from "react";
 import Navbar from "../components/Navbar";
-import Hero from '../components/Hero';
-import About from '../components/AboutUs';
-import WorkFlow from '../components/WorkFlow';
-import CtaSection from '../components/CtaSection';
-import Services from '../components/Services';
-import Enterprise from '../components/Enfoque';
+import Hero from "../components/Hero";
+import About from "../components/AboutUs";
+import WorkFlow from "../components/WorkFlow";
+import CtaSection from "../components/CtaSection";
+import Services from "../components/Services";
+import Enterprise from "../components/Enfoque";
 import SmoothScroll from "../components/SmoothScroll";
-import Certificacion from '../components/Certificacion';
-import FormContact from '../components/FormContact';
-import Footer from '../components/Footer';
-import Gallery from '../components/Gallery';
-import Sustentabilidad from '../components/Sustentabilidad';
+import Certificacion from "../components/Certificacion";
+import FormContact from "../components/FormContact";
+import Footer from "../components/Footer";
+import Gallery from "../components/Gallery";
+import Sustentabilidad from "../components/Sustentabilidad";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import ScrollTopButton from "../components/ScrollTopButton";
+import Testimonials from "../components/Testimonials";
 
-import Testimonials from '../components/Testimonials';
+import ScrollToTop from "./ScrollToTop";
 
-import ScrollToTop from './ScrollToTop';
 function Home() {
 
-const location = useLocation();
+  const location = useLocation();
 
-useEffect(() => {
-  if (location.state?.scrollTo === "contact") {
-    setTimeout(() => {
-      document.getElementById("contact")?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }, 0);
-  }
-}, [location]);
+  useEffect(() => {
+
+    if (location.state?.scrollTo === "contact") {
+
+      setTimeout(() => {
+
+        document.getElementById("contact")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+
+      }, 0);
+
+    }
+
+  }, [location]);
+
   return (
+
     <>
-     <SmoothScroll /> 
+      <SmoothScroll />
 
-    <Navbar />
-    <Hero />
-    <Services /> 
-    {/* <About /> */}
-  
+      <Navbar />
 
-    <Certificacion />
-    <Sustentabilidad />
-    <WorkFlow />
-    <CtaSection />
+      <Hero />
 
-<Testimonials />
-<Enterprise />   
-<Gallery />
+      <Services />
+
+      {/* <About /> */}
+
+      <Certificacion />
+
+      <Sustentabilidad />
+
+      <WorkFlow />
+
+      <CtaSection />
+
+      <Testimonials />
+
+      <Enterprise />
+
+      <Gallery />
 
       <FormContact />
+
       <Footer />
+
       <ScrollTopButton />
     </>
+
   );
+
 }
 
 export default Home;

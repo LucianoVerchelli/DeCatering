@@ -77,6 +77,13 @@
 
   gap: 14px;
 }
+p{
+
+  color: rgba(255,255,255,0.45);
+
+  line-height: 1.8;
+
+  font-size: 0.95rem; }
 
 /* TITLE */
 
@@ -89,6 +96,15 @@
   margin-bottom: 12px;
 
   font-weight: 600;
+}
+
+.social-links-footer {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 20px;
+
 }
 
 /* LINKS */
@@ -122,6 +138,8 @@
   max-width: 1400px;
 
   margin: auto;
+
+  text-align: center;
 
   margin-top: 70px;
 

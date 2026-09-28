@@ -100,10 +100,6 @@ Materias primas seleccionadas, Certificación BPM IRAM 14001 y fuerte compromiso
           </h3>
 
           <p>
-            contacto@email.com
-          </p>
-
-          <p >
             Buenos Aires, Argentina
           </p>
 

@@ -110,7 +110,7 @@ function Home() {
 
       <Enterprise />
 
-      <Gallery />
+      {/* <Gallery /> */}
 
       <FormContact />
 

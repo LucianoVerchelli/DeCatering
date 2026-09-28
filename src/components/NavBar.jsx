@@ -108,9 +108,9 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
             <li onClick={() => scrollToSection("sustainability")}>
               <a href="#sustainability">Gestion Ambiental</a>
             </li>
-            <li onClick={() => scrollToSection("gallery")}>
+            {/* <li onClick={() => scrollToSection("gallery")}>
               <a href="#presentations">Presentaciones</a>
-            </li>
+            </li> */}
             <li onClick={() => scrollToSection("testimonials")}>
               <a href="#opiniones">Testimonios</a>
             </li>
@@ -226,14 +226,14 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
       </a>
     </li>
 
-    <li>
+    {/* <li>
       <a
         href="#presentations"
         onClick={() => setMenuOpen(false)}
       >
         Presentaciones
       </a>
-    </li>
+    </li> */}
 
     <li>
       <a

@@ -28,18 +28,14 @@ function Testimonials() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrent((prev) =>
+      (prev + 1) % testimonials.length
+    );
+  }, 5000);
 
-    const interval = setInterval(() => {
-
-      setCurrent((prev) =>
-        (prev + 1) % testimonials.length
-      );
-
-    }, 5000);
-
-    return () => clearInterval(interval);
-
-  }, []);
+  return () => clearInterval(interval);
+}, [testimonials.length]);
 
   return (
 

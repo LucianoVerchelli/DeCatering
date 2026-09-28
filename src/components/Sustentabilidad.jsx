@@ -4,7 +4,6 @@ import {
   Leaf,
   Recycle,
   Truck,
-  Droplets,
   ShieldCheck,
   Sprout,
   Factory

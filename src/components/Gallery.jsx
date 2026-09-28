@@ -67,10 +67,12 @@ function Gallery() {
 
         <div className="gallery-slider">
 
-          <img
-            src={images[current]}
-            alt="imagenes de platos"
-          />
+         <img
+  src={images[current]}
+  alt="Imagen de platos"
+  loading="lazy"
+  decoding="async"
+/>
 
         </div>
 
@@ -102,7 +104,12 @@ function Gallery() {
 
           >
 
-            <img src={img} alt="Imagenes de Platos" />
+            <img
+      src={img}
+      alt=""
+      loading="lazy"
+      decoding="async"
+    />
 
           </div>
 

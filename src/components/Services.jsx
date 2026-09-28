@@ -28,7 +28,12 @@ function Services() {
           transition={{ duration: 0.9 }}
           viewport={{ once: true }}
         >
-          <img src={img1} alt="" />
+        <img
+  src={img1}
+  alt=""
+  loading="lazy"
+  decoding="async"
+/>
 
           <div className="service-overlay"></div>
 
@@ -52,7 +57,12 @@ function Services() {
           transition={{ duration: 1.1 }}
           viewport={{ once: true }}
         >
-          <img src={img3} alt="" />
+        <img
+  src={img3}
+  alt=""
+  loading="lazy"
+  decoding="async"
+/>
 
           <div className="service-overlay"></div>
 
@@ -78,7 +88,12 @@ function Services() {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <img src={img2} alt="" />
+         <img
+  src={img2}
+  alt=""
+  loading="lazy"
+  decoding="async"
+/>
 
           <div className="service-overlay"></div>
 

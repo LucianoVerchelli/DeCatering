@@ -1,7 +1,5 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { HashLink } from "react-router-hash-link";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Asistido from "../assets/img2.webp";
 
@@ -20,6 +18,62 @@ const irAContacto = () => {
   return (
 
     <>
+    <title>Catering con Asistencia para Empresas | DeCatering</title>
+
+<meta
+  name="description"
+  content="Servicio de catering con asistencia para empresas, con preparación, recepción, calentamiento, emplatado y atención durante el servicio."
+/>
+
+<link
+  rel="canonical"
+  href={`${window.location.origin}${window.location.pathname}`}
+/>
+
+<meta
+  property="og:type"
+  content="website"
+/>
+
+<meta
+  property="og:site_name"
+  content="DeCatering"
+/>
+
+<meta
+  property="og:locale"
+  content="es_AR"
+/>
+
+<meta
+  property="og:title"
+  content="Catering con Asistencia para Empresas | DeCatering"
+/>
+
+<meta
+  property="og:description"
+  content="Servicio de catering con asistencia para empresas, con preparación, recepción, calentamiento, emplatado y atención durante el servicio."
+/>
+
+<meta
+  property="og:url"
+  content={`${window.location.origin}${window.location.pathname}`}
+/>
+
+<meta
+  name="twitter:card"
+  content="summary_large_image"
+/>
+
+<meta
+  name="twitter:title"
+  content="Catering con Asistencia para Empresas | DeCatering"
+/>
+
+<meta
+  name="twitter:description"
+  content="Servicio de catering con asistencia para empresas, con preparación, recepción, calentamiento, emplatado y atención durante el servicio."
+/>
       <Navbar />
 
       <section className="service-showcase">
@@ -42,10 +96,12 @@ const irAContacto = () => {
 
 <div className="hero-service-image catering-imgage">
 
-  <img
-    src={Asistido}
-    alt="Catering Con Asistencia - Servicios gastronómicos personalizados"
-  />
+ <img
+  src={Asistido}
+  alt="Servicio de catering con asistencia para empresas"
+  decoding="async"
+  fetchPriority="high"
+/>
 
 </div>
               </div>

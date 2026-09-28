@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
-import { useNavigate } from "react-router-dom";
 import { lenisInstance } from "./SmoothScroll";
 
 
@@ -17,7 +16,7 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const [servicesOpen, setServicesOpen] = useState(false);
-  const navigate = useNavigate();
+
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);

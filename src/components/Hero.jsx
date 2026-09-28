@@ -1,6 +1,6 @@
 import "../styles/Hero.css";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+
 
 import img1 from "../assets/img1.webp";
 import img2 from "../assets/img2.webp";
@@ -12,7 +12,7 @@ const images = [
     img2,
     img3
   ];
-  const navigate = useNavigate();
+ 
 
   const irAContacto = () => {
 
@@ -27,23 +27,25 @@ const images = [
 
   const [currentImage, setCurrentImage] = useState(0);
 
-  useEffect(() => {
+ useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentImage((prev) =>
+      (prev + 1) % images.length
+    );
+  }, 5000);
 
-    const interval = setInterval(() => {
-
-      setCurrentImage((prev) =>
-        (prev + 1) % images.length
-      );
-
-    }, 4000);
-
-    return () => clearInterval(interval);
-
-  }, []);
+  return () => clearInterval(interval);
+}, [images.length]);
 
   return (
-
+   
     <section className="hero" id="home">
+       <link
+        rel="preload"
+        as="image"
+        href={img1}
+        fetchPriority="high"
+      />
 
       <div className="hero-slider">
 

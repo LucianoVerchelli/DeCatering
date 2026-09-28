@@ -45,7 +45,12 @@ function Certificacion() {
       </motion.div>
 
       <div className="certificacion-logo">
-        <img src={logoCert} alt="Imagen de Certificación Iram 14201" />
+        <img
+  src={logoCert}
+  alt="Certificación IRAM 14201"
+  loading="lazy"
+  decoding="async"
+/>
       </div>
     </section>
   );

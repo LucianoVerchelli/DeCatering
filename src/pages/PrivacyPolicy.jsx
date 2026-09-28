@@ -8,6 +8,17 @@ function PrivacyPolicy() {
   return (
 
     <>
+    <title>Política de Privacidad | DeCatering</title>
+
+<meta
+  name="description"
+  content="Política de privacidad y tratamiento de datos personales de DeCatering."
+/>
+
+<link
+  rel="canonical"
+  href={`${window.location.origin}${window.location.pathname}`}
+/>
       <Navbar />
 
       <main className="privacy-page">

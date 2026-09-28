@@ -1,7 +1,5 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { HashLink } from "react-router-hash-link";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Comedoresimg from "../assets/inSitu.webp";
 
@@ -19,6 +17,61 @@ function Comedores() {
 
   return (
     <>
+    <title>Comedores In Situ | Gestión Integral para Empresas | DeCatering</title>
+
+<meta
+  name="description"
+  content="Gestión integral de comedores para empresas, con elaboración diaria, personal especializado, administración del servicio y soluciones gastronómicas adaptadas."
+/>
+<link
+  rel="canonical"
+  href={`${window.location.origin}${window.location.pathname}`}
+/>
+
+<meta
+  property="og:type"
+  content="website"
+/>
+
+<meta
+  property="og:site_name"
+  content="DeCatering"
+/>
+
+<meta
+  property="og:locale"
+  content="es_AR"
+/>
+
+<meta
+  property="og:title"
+  content="Comedores In Situ | Gestión Integral para Empresas | DeCatering"
+/>
+
+<meta
+  property="og:description"
+  content="Gestión integral de comedores para empresas, con elaboración diaria, personal especializado, administración del servicio y soluciones gastronómicas adaptadas."
+/>
+
+<meta
+  property="og:url"
+  content={`${window.location.origin}${window.location.pathname}`}
+/>
+
+<meta
+  name="twitter:card"
+  content="summary_large_image"
+/>
+
+<meta
+  name="twitter:title"
+  content="Comedores In Situ | Gestión Integral para Empresas | DeCatering"
+/>
+
+<meta
+  name="twitter:description"
+  content="Gestión integral de comedores para empresas, con elaboración diaria, personal especializado, administración del servicio y soluciones gastronómicas adaptadas."
+/>
       <Navbar />
 
       <section className="service-showcase">
@@ -46,10 +99,12 @@ function Comedores() {
           </div>
 
           <div className="hero-service-image">
-            <img
-              src={Comedoresimg}
-              alt="Comedores In Situ - Gestion integral de servicios gastronómicos"
-            />
+           <img
+  src={Comedoresimg}
+  alt="Gestión integral de comedores para empresas"
+  decoding="async"
+  fetchPriority="high"
+/>
           </div>
         </div>
 

@@ -1,7 +1,5 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { HashLink } from "react-router-hash-link";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Viandasimg from "../assets/imgEn2.jpg";
 
@@ -19,6 +17,62 @@ function Viandas() {
 
   return (
     <>
+
+    <title>Viandas Termoselladas para Empresas | DeCatering</title>
+
+<meta
+  name="description"
+  content="Servicio de viandas termoselladas para empresas, con menús variados, pedidos programados, rotulado individual y entrega diaria."
+/>
+<link
+  rel="canonical"
+  href={`${window.location.origin}${window.location.pathname}`}
+/>
+
+<meta
+  property="og:type"
+  content="website"
+/>
+
+<meta
+  property="og:site_name"
+  content="DeCatering"
+/>
+
+<meta
+  property="og:locale"
+  content="es_AR"
+/>
+
+<meta
+  property="og:title"
+  content="Viandas Termoselladas para Empresas | DeCatering"
+/>
+
+<meta
+  property="og:description"
+  content="Servicio de viandas termoselladas para empresas, con menús variados, pedidos programados, rotulado individual y entrega diaria."
+/>
+
+<meta
+  property="og:url"
+  content={`${window.location.origin}${window.location.pathname}`}
+/>
+
+<meta
+  name="twitter:card"
+  content="summary_large_image"
+/>
+
+<meta
+  name="twitter:title"
+  content="Viandas Termoselladas para Empresas | DeCatering"
+/>
+
+<meta
+  name="twitter:description"
+  content="Servicio de viandas termoselladas para empresas, con menús variados, pedidos programados, rotulado individual y entrega diaria."
+/>
       <Navbar />
       
 
@@ -41,9 +95,11 @@ function Viandas() {
         
                   <div className="hero-service-image">
                     <img
-                      src={Viandasimg}
-                      alt="Viandas Termoselladas - Servicios gastronómicos para empresas"
-                    />
+  src={Viandasimg}
+  alt="Viandas termoselladas para empresas"
+  decoding="async"
+  fetchPriority="high"
+/>
                   </div>
                 </div>
         

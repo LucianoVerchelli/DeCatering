@@ -9,7 +9,6 @@ import SmoothScroll from "../components/SmoothScroll";
 import Certificacion from "../components/Certificacion";
 import FormContact from "../components/FormContact";
 import Footer from "../components/Footer";
-import Gallery from "../components/Gallery";
 import Sustentabilidad from "../components/Sustentabilidad";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";

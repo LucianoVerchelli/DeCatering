@@ -61,7 +61,7 @@ function About() {
           viewport={{ once: true }}
         >
 
-          <img src={aboutImage} alt="about" />
+          <img src={aboutImage} alt="Servicios gastronómicos corporativos de DeCatering" />
 
         </motion.div>
 

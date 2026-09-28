@@ -60,7 +60,7 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
             });
           }}
         >
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="DeCatering" />
         </Link>
 
         {/* NAV DESKTOP */}

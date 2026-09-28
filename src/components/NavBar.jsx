@@ -8,7 +8,7 @@ import { IoClose } from "react-icons/io5";
 import { lenisInstance } from "./SmoothScroll";
 
 
-import logo from "../assets/logo-2-variante.svg";
+import logo from "../assets/logo-2-sinF.svg";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);

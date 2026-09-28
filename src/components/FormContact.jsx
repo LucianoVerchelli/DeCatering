@@ -29,62 +29,68 @@ function Contact() {
     setError("");
 
     const nombreRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}$/;
-
     const apellidoRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,50}$/;
-
     const empresaRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ0-9\s.&-]{3,100}$/;
-
     const cargoRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}$/;
-
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
-    if (!nombreRegex.test(formData.nombre)) {
-      setError("Ingrese un nombre válido (mínimo 3 letras sin numeros ni caracteres especiales).");
+    if (!nombreRegex.test(formData.nombre.trim())) {
+      setError(
+        "Ingrese un nombre válido (mínimo 3 letras sin numeros ni caracteres especiales)."
+      );
 
       return;
     }
 
-    if (!apellidoRegex.test(formData.apellido)) {
-      setError("Ingrese un apellido válido sin numeros ni caracteres especiales.");
+    if (!apellidoRegex.test(formData.apellido.trim())) {
+      setError(
+        "Ingrese un apellido válido sin numeros ni caracteres especiales."
+      );
 
       return;
     }
 
-    if (!emailRegex.test(formData.email)) {
+    if (!emailRegex.test(formData.email.trim())) {
       setError("Ingrese un correo electrónico válido.");
 
       return;
     }
 
-    if (!empresaRegex.test(formData.empresa)) {
-      setError("Ingrese una empresa válida sin numeros ni caracteres especiales.");
+    if (!empresaRegex.test(formData.empresa.trim())) {
+      setError(
+        "Ingrese una empresa válida sin numeros ni caracteres especiales."
+      );
 
       return;
     }
 
-    if (formData.cargo.trim() && !cargoRegex.test(formData.cargo)) {
-      setError("Ingrese un cargo válido sin numeros ni caracteres especiales.");
+    if (formData.cargo.trim() && !cargoRegex.test(formData.cargo.trim())) {
+      setError(
+        "Ingrese un cargo válido sin numeros ni caracteres especiales."
+      );
 
       return;
     }
 
     if (formData.mensaje.trim().length < 20) {
-      setError("El mensaje debe contener al menos 20 caracteres sin numeros ni caracteres especiales.");
+      setError(
+        "El mensaje debe contener al menos 20 caracteres sin numeros ni caracteres especiales."
+      );
 
       return;
     }
 
     console.log("Formulario listo para enviar:", formData);
 
-   Swal.fire({
-  icon: "success",
-  title: "Mensaje enviado",
-  text: "Nos pondremos en contacto con usted a la brevedad.",
-  confirmButtonText: "Aceptar",
-  confirmButtonColor: "#a69585",
-  background: "#111",
-  color: "#fff"
-});
+    Swal.fire({
+      icon: "success",
+      title: "Mensaje enviado",
+      text: "Nos pondremos en contacto con usted a la brevedad.",
+      confirmButtonText: "Aceptar",
+      confirmButtonColor: "#a69585",
+      background: "#111",
+      color: "#fff",
+    });
 
     setFormData({
       nombre: "",
@@ -149,69 +155,100 @@ function Contact() {
             once: true,
           }}
         >
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form
+            className="contact-form"
+            onSubmit={handleSubmit}
+            noValidate
+          >
+            {/* Honeypot anti-spam */}
             <input
-            htmlFor="nombre"
+              className="contact-honeypot"
+              type="text"
+              name="website"
+              tabIndex="-1"
+              autoComplete="off"
+              aria-hidden="true"
+            />
+
+            <input
+              id="nombre"
               type="text"
               name="nombre"
               placeholder="Nombre"
               value={formData.nombre}
               onChange={handleChange}
-              label="Nombre"
+              aria-label="Nombre"
+              autoComplete="given-name"
+              maxLength={80}
+              required
             />
 
             <input
-              htmlFor="apellido"  
+              id="apellido"
               type="text"
               name="apellido"
               placeholder="Apellido"
               value={formData.apellido}
               onChange={handleChange}
-              label="Apellido"
+              aria-label="Apellido"
+              autoComplete="family-name"
+              maxLength={80}
+              required
             />
 
             <input
-              htmlFor="email" 
+              id="email"
               type="email"
               name="email"
               placeholder="Email"
               value={formData.email}
               onChange={handleChange}
-              label="Email"
+              aria-label="Correo electrónico"
+              autoComplete="email"
+              maxLength={254}
+              required
             />
 
             <input
-            htmlFor="empresa"
+              id="empresa"
               type="text"
               name="empresa"
               placeholder="Empresa"
               value={formData.empresa}
               onChange={handleChange}
-              label="Empresa"
+              aria-label="Empresa"
+              autoComplete="organization"
+              maxLength={150}
+              required
             />
 
             <input
-              htmlFor="cargo"
+              id="cargo"
               type="text"
               name="cargo"
               placeholder="Cargo"
               value={formData.cargo}
               onChange={handleChange}
-              label="Cargo"
+              aria-label="Cargo"
+              autoComplete="organization-title"
+              maxLength={100}
             />
 
             <textarea
-              htmlFor="mensaje"
+              id="mensaje"
               name="mensaje"
               placeholder="Mensaje"
               rows="6"
               value={formData.mensaje}
               onChange={handleChange}
-              label="Mensaje"
-            ></textarea>
+              aria-label="Mensaje"
+              maxLength={2000}
+              required
+            />
 
             {error && (
               <p
+                role="alert"
                 style={{
                   color: "#ff6b6b",
                   fontSize: ".9rem",
@@ -222,7 +259,12 @@ function Contact() {
               </p>
             )}
 
-            <button type="submit">Enviar mensaje</button>
+            <button
+              type="submit"
+              aria-label="Enviar mensaje de contacto"
+            >
+              Enviar mensaje
+            </button>
           </form>
         </motion.div>
       </div>

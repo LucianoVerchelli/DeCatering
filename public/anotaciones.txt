@@ -1,2 +1,25 @@
 formulario tiene que enviar a :
 comercial@decatering.com.ar
+
+
+en mobile, necesita que el desplegable sea un recuadro para distingir sobre el resto. 
+hacer que funcione lo demas cuando se preciona 
+
+
+necesito cambiar las fotos de los servicios. 1 foto de cada 1 de los servicios 
+
+configurar el token de ads. 
+
+poner el linkedin en social links. 
+
+
+
+// BETI JAI 
+
+
+REVISAR EL TEMA DE SPAM
+
+necesita cambiar las fotos, no tocar la logica y el diseño que tiene. 
+
+
+necesita mejorar el rendimiento y el seo de beti jai para no estar perdiendo flujo de google ads. 

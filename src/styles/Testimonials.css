@@ -1,6 +1,6 @@
 .testimonials {
-  padding: 140px 0;
-  background: #050505;
+  padding: 50px 0;
+  background: #5b534d;
   text-align: center;
   overflow: hidden;
 }
@@ -45,11 +45,9 @@
   margin: 80px auto 0;
   text-align: center;
 
-  /* Evita saltos entre testimonios */
   position: relative;
   min-height: 520px;
 
-  padding-bottom: 80px;
 }
 
 .stars {

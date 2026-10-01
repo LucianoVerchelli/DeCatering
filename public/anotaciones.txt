@@ -3,12 +3,12 @@ comercial@decatering.com.ar
 
 
 en mobile, necesita que el desplegable sea un recuadro para distingir sobre el resto. 
-hacer que funcione lo demas cuando se preciona 
+hacer que funcione lo demas cuando se preciona  // done 
 
 
-necesito cambiar las fotos de los servicios. 1 foto de cada 1 de los servicios 
+necesito cambiar las fotos de los servicios. 1 foto de cada 1 de los servicios // 
 
-configurar el token de ads. 
+configurar el token de ads.  
 
 poner el linkedin en social links. 
 

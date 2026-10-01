@@ -1,22 +1,23 @@
 import "../styles/Navbar.css";
 import SocialLinks from "./SocialLinks";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { lenisInstance } from "./SmoothScroll";
 
-
 import logo from "../assets/logo-2-variante.svg";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
   const [servicesOpen, setServicesOpen] = useState(false);
-
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -27,6 +28,22 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
       offset: -130,
       duration: 1.2,
     });
+  };
+
+  // Navegación del menú mobile hacia secciones de la Home
+  const handleMobileSection = (id) => {
+    setMenuOpen(false);
+
+    if (location.pathname === "/") {
+      scrollToSection(id);
+      return;
+    }
+
+    navigate("/");
+
+    setTimeout(() => {
+      scrollToSection(id);
+    }, 300);
   };
 
   useEffect(() => {
@@ -76,7 +93,9 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
                 Servicios
                 <span
                   className={
-                    servicesOpen ? "dropdown-arrow active" : "dropdown-arrow"
+                    servicesOpen
+                      ? "dropdown-arrow active"
+                      : "dropdown-arrow"
                   }
                 >
                   ▼
@@ -85,7 +104,9 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
               <div
                 className={
-                  servicesOpen ? "dropdown-menu active" : "dropdown-menu"
+                  servicesOpen
+                    ? "dropdown-menu active"
+                    : "dropdown-menu"
                 }
               >
                 <Link to="/servicios/viandasParaEmpresas">
@@ -93,7 +114,7 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
                 </Link>
 
                 <Link to="/servicios/CateringAsistido">
-                 Viandas Con Asistencia
+                  Viandas Con Asistencia
                 </Link>
 
                 <Link to="/servicios/ComedoresInSitu">
@@ -101,16 +122,21 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
                 </Link>
               </div>
             </li>
+
             {/* <li><a href="#about">Nosotros</a></li> */}
+
             <li onClick={() => scrollToSection("certifications")}>
               <a href="#certifications">Certificaciones</a>
             </li>
+
             <li onClick={() => scrollToSection("sustainability")}>
               <a href="#sustainability">Gestion Ambiental</a>
             </li>
+
             {/* <li onClick={() => scrollToSection("gallery")}>
               <a href="#presentations">Presentaciones</a>
             </li> */}
+
             <li onClick={() => scrollToSection("testimonials")}>
               <a href="#opiniones">Testimonios</a>
             </li>
@@ -121,141 +147,168 @@ const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
           </ul>
         </nav>
 
-        {/* social links de ig y linkedin */}
+        {/* SOCIAL LINKS */}
 
         <SocialLinks />
 
         {/* MENU MOBILE */}
 
-        <div className="menu-icon" onClick={() => setMenuOpen(true)}>
+        <div
+          className="menu-icon"
+          onClick={() => setMenuOpen(true)}
+        >
           <HiOutlineMenuAlt3 />
         </div>
       </header>
 
       {/* MOBILE MENU */}
 
-    <div className={menuOpen ? "mobile-menu active" : "mobile-menu"}>
-
-  <div
-    className="close-menu"
-    onClick={() => setMenuOpen(false)}
-  >
-    <IoClose />
-  </div>
-
-  <ul>
-
-    <li>
-      <Link
-        to="/"
-        onClick={() => setMenuOpen(false)}
-      >
-        Inicio
-      </Link>
-    </li>
-
-    <li className="mobile-services">
-
-      <button
-        className="mobile-services-btn"
-        onClick={() =>
-          setMobileServicesOpen(!mobileServicesOpen)
-        }
-      >
-        Servicios
-
-        <span
-          className={
-            mobileServicesOpen
-              ? "mobile-arrow active"
-              : "mobile-arrow"
-          }
-        >
-          ▼
-        </span>
-      </button>
-
       <div
         className={
-          mobileServicesOpen
-            ? "mobile-services-dropdown active"
-            : "mobile-services-dropdown"
+          menuOpen
+            ? "mobile-menu active"
+            : "mobile-menu"
         }
       >
-
-        <Link
-          to="/servicios/viandasParaEmpresas"
+        <div
+          className="close-menu"
           onClick={() => setMenuOpen(false)}
         >
-          Viandas Termoselladas
-        </Link>
+          <IoClose />
+        </div>
 
-        <Link
-          to="/servicios/CateringAsistido"
-          onClick={() => setMenuOpen(false)}
-        >
-          Viandas Con Asistencia
-        </Link>
+        <ul>
 
-        <Link
-          to="/servicios/ComedoresInSitu"
-          onClick={() => setMenuOpen(false)}
-        >
-          Comedores - Gestión Integral
-        </Link>
+          {/* INICIO */}
 
+          <li>
+            <Link
+              to="/"
+              onClick={() => setMenuOpen(false)}
+            >
+              Inicio
+            </Link>
+          </li>
+
+          {/* SERVICIOS */}
+
+          <li
+            className={
+              mobileServicesOpen
+                ? "mobile-services open"
+                : "mobile-services"
+            }
+          >
+            <button
+              className="mobile-services-btn"
+              onClick={() =>
+                setMobileServicesOpen(!mobileServicesOpen)
+              }
+            >
+              Servicios
+
+              <span
+                className={
+                  mobileServicesOpen
+                    ? "mobile-arrow active"
+                    : "mobile-arrow"
+                }
+              >
+                ▼
+              </span>
+            </button>
+
+            <div
+              className={
+                mobileServicesOpen
+                  ? "mobile-services-dropdown active"
+                  : "mobile-services-dropdown"
+              }
+            >
+
+              <Link
+                to="/servicios/viandasParaEmpresas"
+                onClick={() => setMenuOpen(false)}
+              >
+                Viandas Termoselladas
+              </Link>
+
+              <Link
+                to="/servicios/CateringAsistido"
+                onClick={() => setMenuOpen(false)}
+              >
+                Viandas Con Asistencia
+              </Link>
+
+              <Link
+                to="/servicios/ComedoresInSitu"
+                onClick={() => setMenuOpen(false)}
+              >
+                Comedores - Gestión Integral
+              </Link>
+
+            </div>
+          </li>
+
+          {/* CERTIFICACIONES */}
+
+          <li>
+            <a
+              href="#certifications"
+              onClick={(e) => {
+                e.preventDefault();
+                handleMobileSection("certifications");
+              }}
+            >
+              Certificaciones
+            </a>
+          </li>
+
+          {/* GESTIÓN AMBIENTAL */}
+
+          <li>
+            <a
+              href="#sustainability"
+              onClick={(e) => {
+                e.preventDefault();
+                handleMobileSection("sustainability");
+              }}
+            >
+              Gestión Ambiental
+            </a>
+          </li>
+
+
+          {/* TESTIMONIOS */}
+
+          <li>
+            <a
+              href="#opiniones"
+              onClick={(e) => {
+                e.preventDefault();
+                handleMobileSection("opiniones");
+              }}
+            >
+              Testimonios
+            </a>
+          </li>
+
+          {/* CONTACTO */}
+
+          <li>
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                handleMobileSection("contact");
+              }}
+            >
+              Contacto
+            </a>
+          </li>
+
+        </ul>
       </div>
-
-    </li>
-
-    <li>
-      <a
-        href="#certifications"
-        onClick={() => setMenuOpen(false)}
-      >
-        Certificaciones
-      </a>
-    </li>
-
-    <li>
-      <a
-        href="#sustainability"
-        onClick={() => setMenuOpen(false)}
-      >
-        Gestión Ambiental
-      </a>
-    </li>
-
-    {/* <li>
-      <a
-        href="#presentations"
-        onClick={() => setMenuOpen(false)}
-      >
-        Presentaciones
-      </a>
-    </li> */}
-
-    <li>
-      <a
-        href="#opiniones"
-        onClick={() => setMenuOpen(false)}
-      >
-        Testimonios
-      </a>
-    </li>
-
-    <li>
-      <a
-        href="#contact"
-        onClick={() => setMenuOpen(false)}
-      >
-        Contacto
-      </a>
-    </li>
-
-  </ul>
-
-</div>
     </>
   );
 }

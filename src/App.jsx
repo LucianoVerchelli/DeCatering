@@ -5,8 +5,8 @@ import {
 } from "react-router-dom";
 
 import Home from "./pages/Home";
-import Catering from "./pages/cateringAsistido";
-import Comedores from "./pages/comedoresInSitu";
+import Catering from "./pages/CateringAsistido";
+import Comedores from "./pages/ComedoresInSitu";
 import Viandas from "./pages/ViandasParaEmpresas";
 import ScrollToTop from './pages/ScrollToTop';
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -14,41 +14,43 @@ function App() {
 
   return (
 
- <BrowserRouter basename="/DeCatering">
+ <BrowserRouter>
 
    <ScrollToTop />
 
       <Routes>
 
-        <Route
-          path="/"
-          element={<Home />}
-        />
+  <Route
+    path="/"
+    element={<Home />}
+  />
 
+  <Route
+    path="/servicios/CateringAsistido"
+    element={<Catering />}
+  />
 
-        <Route path="*" element={<h1>Ruta no encontrada</h1>} />
+  <Route
+    path="/servicios/ComedoresInSitu"
+    element={<Comedores />}
+  />
 
-                    <Route
-              path="/servicios/CateringAsistido"
-              element={<Catering />}
-            />
+  <Route
+    path="/servicios/ViandasParaEmpresas"
+    element={<Viandas />}
+  />
 
-            <Route
-              path="/servicios/comedoresInSitu"
-              element={<Comedores />}
-            />
+  <Route
+    path="/politica-de-privacidad"
+    element={<PrivacyPolicy />}
+  />
 
-            <Route
-              path="/servicios/viandasParaEmpresas"
-              element={<Viandas />}
-            />
+  <Route
+    path="*"
+    element={<h1>Ruta no encontrada</h1>}
+  />
 
-            <Route
-  path="/politica-de-privacidad"
-  element={<PrivacyPolicy />}
-/>
-
-      </Routes>
+</Routes>
 
     </BrowserRouter>
 

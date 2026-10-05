@@ -30,9 +30,11 @@ function Navbar() {
     });
   };
 
-  // Navegación del menú mobile hacia secciones de la Home
-  const handleMobileSection = (id) => {
+  // Navegación hacia secciones de la Home
+  const handleSectionNavigation = (id) => {
     setMenuOpen(false);
+    setMobileServicesOpen(false);
+    setServicesOpen(false);
 
     if (location.pathname === "/") {
       scrollToSection(id);
@@ -65,6 +67,7 @@ function Navbar() {
   return (
     <>
       <header className={scrolled ? "navbar active" : "navbar"}>
+
         {/* LOGO */}
 
         <Link
@@ -84,6 +87,7 @@ function Navbar() {
 
         <nav className="desktop-nav">
           <ul className="nav-links">
+
             <li
               className="services-dropdown"
               onMouseEnter={() => setServicesOpen(true)}
@@ -91,6 +95,7 @@ function Navbar() {
             >
               <span className="services-link">
                 Servicios
+
                 <span
                   className={
                     servicesOpen
@@ -109,7 +114,7 @@ function Navbar() {
                     : "dropdown-menu"
                 }
               >
-                <Link to="/servicios/viandasParaEmpresas">
+                <Link to="/servicios/ViandasParaEmpresas">
                   Viandas Termoselladas
                 </Link>
 
@@ -123,27 +128,66 @@ function Navbar() {
               </div>
             </li>
 
-            {/* <li><a href="#about">Nosotros</a></li> */}
+            {/* CERTIFICACIONES */}
 
-            <li onClick={() => scrollToSection("certifications")}>
-              <a href="#certifications">Certificaciones</a>
+            <li>
+              <a
+                href="#certifications"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSectionNavigation("certifications");
+                }}
+              >
+                Certificaciones
+              </a>
             </li>
 
-            <li onClick={() => scrollToSection("sustainability")}>
-              <a href="#sustainability">Gestion Ambiental</a>
+            {/* GESTIÓN AMBIENTAL */}
+
+            <li>
+              <a
+                href="#sustainability"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSectionNavigation("sustainability");
+                }}
+              >
+                Gestion Ambiental
+              </a>
             </li>
 
             {/* <li onClick={() => scrollToSection("gallery")}>
               <a href="#presentations">Presentaciones</a>
             </li> */}
 
-            <li onClick={() => scrollToSection("testimonials")}>
-              <a href="#opiniones">Testimonios</a>
+            {/* TESTIMONIOS */}
+
+            <li>
+              <a
+                href="#opiniones"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSectionNavigation("opiniones");
+                }}
+              >
+                Testimonios
+              </a>
             </li>
 
-            <li onClick={() => scrollToSection("contact")}>
-              <a href="#contact">Contacto</a>
+            {/* CONTACTO */}
+
+            <li>
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSectionNavigation("contact");
+                }}
+              >
+                Contacto
+              </a>
             </li>
+
           </ul>
         </nav>
 
@@ -159,6 +203,7 @@ function Navbar() {
         >
           <HiOutlineMenuAlt3 />
         </div>
+
       </header>
 
       {/* MOBILE MENU */}
@@ -170,6 +215,7 @@ function Navbar() {
             : "mobile-menu"
         }
       >
+
         <div
           className="close-menu"
           onClick={() => setMenuOpen(false)}
@@ -199,6 +245,7 @@ function Navbar() {
                 : "mobile-services"
             }
           >
+
             <button
               className="mobile-services-btn"
               onClick={() =>
@@ -227,7 +274,7 @@ function Navbar() {
             >
 
               <Link
-                to="/servicios/viandasParaEmpresas"
+                to="/servicios/ViandasParaEmpresas"
                 onClick={() => setMenuOpen(false)}
               >
                 Viandas Termoselladas
@@ -248,6 +295,7 @@ function Navbar() {
               </Link>
 
             </div>
+
           </li>
 
           {/* CERTIFICACIONES */}
@@ -257,7 +305,7 @@ function Navbar() {
               href="#certifications"
               onClick={(e) => {
                 e.preventDefault();
-                handleMobileSection("certifications");
+                handleSectionNavigation("certifications");
               }}
             >
               Certificaciones
@@ -271,13 +319,12 @@ function Navbar() {
               href="#sustainability"
               onClick={(e) => {
                 e.preventDefault();
-                handleMobileSection("sustainability");
+                handleSectionNavigation("sustainability");
               }}
             >
               Gestión Ambiental
             </a>
           </li>
-
 
           {/* TESTIMONIOS */}
 
@@ -286,7 +333,7 @@ function Navbar() {
               href="#opiniones"
               onClick={(e) => {
                 e.preventDefault();
-                handleMobileSection("opiniones");
+                handleSectionNavigation("opiniones");
               }}
             >
               Testimonios
@@ -300,7 +347,7 @@ function Navbar() {
               href="#contact"
               onClick={(e) => {
                 e.preventDefault();
-                handleMobileSection("contact");
+                handleSectionNavigation("contact");
               }}
             >
               Contacto
@@ -308,6 +355,7 @@ function Navbar() {
           </li>
 
         </ul>
+
       </div>
     </>
   );

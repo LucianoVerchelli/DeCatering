@@ -19,16 +19,22 @@ import Testimonials from "../components/Testimonials";
 function Home() {
   const location = useLocation();
 
-  useEffect(() => {
-    if (location.state?.scrollTo === "contact") {
-      setTimeout(() => {
-        document.getElementById("contact")?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }, 0);
-    }
-  }, [location]);
+ useEffect(() => {
+  const targetId =
+    location.hash?.replace("#", "") ||
+    location.state?.scrollTo;
+
+  if (!targetId) return;
+
+  const timer = setTimeout(() => {
+    document.getElementById(targetId)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }, 100);
+
+  return () => clearTimeout(timer);
+}, [location]);
 
   return ( 
   <>

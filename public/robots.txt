@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lucianoverchelli.github.io/DeCatering/sitemap.xml
+Sitemap: https://decatering.com.ar/sitemap.xml

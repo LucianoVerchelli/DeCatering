@@ -24,11 +24,12 @@ function Footer() {
           />
 
           <p>
-De Catering es una empresa especializada en servicios gastronómicos corporativos, brindando soluciones integrales de alimentación para empresas e industrias. 
+            De Catering es una empresa especializada en servicios gastronómicos corporativos, brindando soluciones integrales de alimentación para empresas e industrias.
 
-Brinda servicio de Viandas,  Catering asistido y Gestión integral de comedores In Situ, garantizando calidad, puntualidad y excelencia en cada servicio. 
+            Brinda servicio de Viandas, Catering asistido y Gestión integral de comedores In Situ, garantizando calidad, puntualidad y excelencia en cada servicio.
 
-Materias primas seleccionadas, Certificación BPM IRAM 14001 y fuerte compromiso con la sustentabilidad, contribuyendo al bienestar de los colaboradores y la eficiencia operativa del cliente. </p>
+            Materias primas seleccionadas, Certificación BPM IRAM 14001 y fuerte compromiso con la sustentabilidad, contribuyendo al bienestar de los colaboradores y la eficiencia operativa del cliente.
+          </p>
 
         </div>
 
@@ -40,19 +41,17 @@ Materias primas seleccionadas, Certificación BPM IRAM 14001 y fuerte compromiso
             Servicios
           </h3>
 
-          <a href="#services">
+          <Link to="/servicios/ViandasParaEmpresas">
             Viandas corporativas
-          </a>
+          </Link>
 
-          <a href="#services">
+          <Link to="/servicios/CateringAsistido">
             Catering empresarial
-          </a>
+          </Link>
 
-          <a href="#services">
+          <Link to="/servicios/ComedoresInSitu">
             Comedores in situ
-          </a>
-
-          
+          </Link>
 
         </div>
 
@@ -64,30 +63,29 @@ Materias primas seleccionadas, Certificación BPM IRAM 14001 y fuerte compromiso
             Atajos
           </h3>
 
-        <Link to="/">
-  Inicio
-</Link>
+          <Link to="/">
+            Inicio
+          </Link>
 
-          <a href="#certifications">
+          <Link to="/#certifications">
             Certificaciones
-          </a>
+          </Link>
 
-          <a href="#sustainability">
+          <Link to="/#sustainability">
             Gestion Ambiental
-          </a>
+          </Link>
 
-          <a href="#presentations">
-            Presentaciones
-          </a>
-          <a href="#opiniones">
+          <Link to="/#opiniones">
             Testimonios
-          </a>
-          <a href="#contact">
-            Contacto 
-          </a>
-<Link to="/politica-de-privacidad">
-  Política de Privacidad
-</Link>
+          </Link>
+
+          <Link to="/#contact">
+            Contacto
+          </Link>
+
+          <Link to="/politica-de-privacidad">
+            Política de Privacidad
+          </Link>
 
         </div>
 
@@ -106,9 +104,11 @@ Materias primas seleccionadas, Certificación BPM IRAM 14001 y fuerte compromiso
           <p>
             Lun-Vie 9:00 - 17:00
           </p>
+
           <div className="social-links-footer">
-              <SocialLinks />
+            <SocialLinks />
           </div>
+
         </div>
 
       </div>
@@ -120,8 +120,6 @@ Materias primas seleccionadas, Certificación BPM IRAM 14001 y fuerte compromiso
         <p>
           © 2026 Todos los derechos reservados
         </p>
-
-
 
       </div>
 

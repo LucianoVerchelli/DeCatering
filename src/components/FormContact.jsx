@@ -1,8 +1,9 @@
 import "../styles/Form.css";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Swal from "sweetalert2";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -15,6 +16,8 @@ function Contact() {
   });
 
   const [error, setError] = useState("");
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const recaptchaRef = useRef(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -23,7 +26,7 @@ function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     setError("");
@@ -80,26 +83,61 @@ function Contact() {
       return;
     }
 
-    console.log("Formulario listo para enviar:", formData);
+    if (!recaptchaToken) {
+      setError("Por favor, confirme que no es un robot.");
+      return;
+    }
 
-    Swal.fire({
-      icon: "success",
-      title: "Mensaje enviado",
-      text: "Nos pondremos en contacto con usted a la brevedad.",
-      confirmButtonText: "Aceptar",
-      confirmButtonColor: "#a69585",
-      background: "#111",
-      color: "#fff",
-    });
+    try {
+      const formDataToSend = new FormData(e.currentTarget);
 
-    setFormData({
-      nombre: "",
-      apellido: "",
-      email: "",
-      empresa: "",
-      cargo: "",
-      mensaje: "",
-    });
+      formDataToSend.append(
+        "g-recaptcha-response",
+        recaptchaToken
+      );
+
+      const response = await fetch("/contact.php", {
+        method: "POST",
+        body: formDataToSend,
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(
+          result.message || "No se pudo enviar el mensaje."
+        );
+      }
+
+      Swal.fire({
+        icon: "success",
+        title: "Mensaje enviado",
+        text: "Nos pondremos en contacto con usted a la brevedad.",
+        confirmButtonText: "Aceptar",
+        confirmButtonColor: "#a69585",
+        background: "#111",
+        color: "#fff",
+      });
+
+      setFormData({
+        nombre: "",
+        apellido: "",
+        email: "",
+        empresa: "",
+        cargo: "",
+        mensaje: "",
+      });
+
+      setRecaptchaToken(null);
+      recaptchaRef.current?.reset();
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error);
+
+      setError(
+        error.message ||
+          "No se pudo enviar el mensaje. Intente nuevamente."
+      );
+    }
   };
 
   return (
@@ -244,6 +282,14 @@ function Contact() {
               aria-label="Mensaje"
               maxLength={2000}
               required
+            />
+
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey="6Le6_uAtAAAAAOuQb86YS-B5qFh2MH_XvNlQcnY2"
+              onChange={(token) => setRecaptchaToken(token)}
+              onExpired={() => setRecaptchaToken(null)}
+              onErrored={() => setRecaptchaToken(null)}
             />
 
             {error && (
